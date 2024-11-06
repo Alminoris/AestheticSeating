@@ -1,0 +1,22 @@
+{
+  "block.aestheticseating.simple_chair_acacia": "Akazienstuhl",
+  "block.aestheticseating.simple_chair_bamboo": "Bambusstuhl",
+  "block.aestheticseating.simple_chair_birch": "Birkenstuhl",
+  "block.aestheticseating.simple_chair_cherry": "Kirschholzstuhl",
+  "block.aestheticseating.simple_chair_crimson": "Karmesinstuhl",
+  "block.aestheticseating.simple_chair_dark_oak": "Dunkeleichenstuhl",
+  "block.aestheticseating.simple_chair_hawthorn": "Weißdornstuhl",
+  "block.aestheticseating.simple_chair_hazelnut": "Haselnussstuhl",
+  "block.aestheticseating.simple_chair_hornbeam": "Hainbuchenstuhl",
+  "block.aestheticseating.simple_chair_jungle": "Dschungelholzstuhl",
+  "block.aestheticseating.simple_chair_mango": "Mangoholzstuhl",
+  "block.aestheticseating.simple_chair_mangrove": "Mangrovenstuhl",
+  "block.aestheticseating.simple_chair_oak": "Eichenstuhl",
+  "block.aestheticseating.simple_chair_plum": "Pflaumenholzstuhl",
+  "block.aestheticseating.simple_chair_quince": "Quittenholzstuhl",
+  "block.aestheticseating.simple_chair_spruce": "Fichtenstuhl",
+  "block.aestheticseating.simple_chair_warped": "Wirrholzstuhl",
+  "item.aestheticseating.cushion_remover": "Kissenentferner",
+  "item.aestheticseating.wrench": "Schraubenschlüssel",
+  "itemgroup.aseattab": "Aesthetic Seating"
+}

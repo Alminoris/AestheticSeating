@@ -1,0 +1,22 @@
+{
+  "block.aestheticseating.simple_chair_acacia": "Silla de acacia",
+  "block.aestheticseating.simple_chair_bamboo": "Silla de bambú",
+  "block.aestheticseating.simple_chair_birch": "Silla de abedul",
+  "block.aestheticseating.simple_chair_cherry": "Silla de cerezo",
+  "block.aestheticseating.simple_chair_crimson": "Silla carmesí",
+  "block.aestheticseating.simple_chair_dark_oak": "Silla de roble oscuro",
+  "block.aestheticseating.simple_chair_hawthorn": "Silla de espino",
+  "block.aestheticseating.simple_chair_hazelnut": "Silla de avellano",
+  "block.aestheticseating.simple_chair_hornbeam": "Silla de carpe",
+  "block.aestheticseating.simple_chair_jungle": "Silla de jungla",
+  "block.aestheticseating.simple_chair_mango": "Silla de mango",
+  "block.aestheticseating.simple_chair_mangrove": "Silla de mangle",
+  "block.aestheticseating.simple_chair_oak": "Silla de roble",
+  "block.aestheticseating.simple_chair_plum": "Silla de ciruelo",
+  "block.aestheticseating.simple_chair_quince": "Silla de membrillo",
+  "block.aestheticseating.simple_chair_spruce": "Silla de abeto",
+  "block.aestheticseating.simple_chair_warped": "Silla distorsionada",
+  "item.aestheticseating.cushion_remover": "Quitacojines",
+  "item.aestheticseating.wrench": "Llave inglesa",
+  "itemgroup.aseattab": "Aesthetic Seating"
+}

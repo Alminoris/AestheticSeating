@@ -1,0 +1,22 @@
+{
+  "block.aestheticseating.simple_chair_acacia": "Chaise en acacia",
+  "block.aestheticseating.simple_chair_bamboo": "Chaise en bambou",
+  "block.aestheticseating.simple_chair_birch": "Chaise en bouleau",
+  "block.aestheticseating.simple_chair_cherry": "Chaise en cerisier",
+  "block.aestheticseating.simple_chair_crimson": "Chaise en bois carmin",
+  "block.aestheticseating.simple_chair_dark_oak": "Chaise en chêne noir",
+  "block.aestheticseating.simple_chair_hawthorn": "Chaise en aubépine",
+  "block.aestheticseating.simple_chair_hazelnut": "Chaise en noisetier",
+  "block.aestheticseating.simple_chair_hornbeam": "Chaise en charme",
+  "block.aestheticseating.simple_chair_jungle": "Chaise en bois tropical",
+  "block.aestheticseating.simple_chair_mango": "Chaise en manguier",
+  "block.aestheticseating.simple_chair_mangrove": "Chaise en palétuvier",
+  "block.aestheticseating.simple_chair_oak": "Chaise en chêne",
+  "block.aestheticseating.simple_chair_plum": "Chaise en prunier",
+  "block.aestheticseating.simple_chair_quince": "Chaise en cognassier",
+  "block.aestheticseating.simple_chair_spruce": "Chaise en épicéa",
+  "block.aestheticseating.simple_chair_warped": "Chaise en bois altéré",
+  "item.aestheticseating.cushion_remover": "Démonte-coussin",
+  "item.aestheticseating.wrench": "Clé à molette",
+  "itemgroup.aseattab": "Aesthetic Seating"
+}

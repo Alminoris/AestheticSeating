@@ -1,0 +1,22 @@
+{
+  "block.aestheticseating.simple_chair_acacia": "Acacia Chair",
+  "block.aestheticseating.simple_chair_bamboo": "Bamboo Chair",
+  "block.aestheticseating.simple_chair_birch": "Birch Chair",
+  "block.aestheticseating.simple_chair_cherry": "Cherry Chair",
+  "block.aestheticseating.simple_chair_crimson": "Crimson Chair",
+  "block.aestheticseating.simple_chair_dark_oak": "Dark Oak Chair",
+  "block.aestheticseating.simple_chair_hawthorn": "Hawthorn Chair",
+  "block.aestheticseating.simple_chair_hazelnut": "Hazelnut Chair",
+  "block.aestheticseating.simple_chair_hornbeam": "Hornbeam Chair",
+  "block.aestheticseating.simple_chair_jungle": "Jungle Chair",
+  "block.aestheticseating.simple_chair_mango": "Mango Chair",
+  "block.aestheticseating.simple_chair_mangrove": "Mangrove Chair",
+  "block.aestheticseating.simple_chair_oak": "Oak Chair",
+  "block.aestheticseating.simple_chair_plum": "Plum Chair",
+  "block.aestheticseating.simple_chair_quince": "Quince Chair",
+  "block.aestheticseating.simple_chair_spruce": "Spruce Chair",
+  "block.aestheticseating.simple_chair_warped": "Warped Chair",
+  "item.aestheticseating.cushion_remover": "Cushion Remover",
+  "item.aestheticseating.wrench": "Wrench",
+  "itemgroup.aseattab": "Aesthetic Seating"
+}

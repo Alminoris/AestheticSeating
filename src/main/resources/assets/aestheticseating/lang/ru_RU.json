@@ -1,0 +1,22 @@
+{
+  "block.aestheticseating.simple_chair_acacia": "Акациевый стул",
+  "block.aestheticseating.simple_chair_bamboo": "Бамбуковый стул",
+  "block.aestheticseating.simple_chair_birch": "Берёзовый стул",
+  "block.aestheticseating.simple_chair_cherry": "Вишнёвый стул",
+  "block.aestheticseating.simple_chair_crimson": "Багровый стул",
+  "block.aestheticseating.simple_chair_dark_oak": "Тёмно-дубовый стул",
+  "block.aestheticseating.simple_chair_hawthorn": "Боярышниковый стул",
+  "block.aestheticseating.simple_chair_hazelnut": "Лещиновый стул",
+  "block.aestheticseating.simple_chair_hornbeam": "Грабовый стул",
+  "block.aestheticseating.simple_chair_jungle": "Тропический стул",
+  "block.aestheticseating.simple_chair_mango": "Манговый стул",
+  "block.aestheticseating.simple_chair_mangrove": "Мангровый стул",
+  "block.aestheticseating.simple_chair_oak": "Дубовый стул",
+  "block.aestheticseating.simple_chair_plum": "Сливовый стул",
+  "block.aestheticseating.simple_chair_quince": "Айвовый стул",
+  "block.aestheticseating.simple_chair_spruce": "Еловый стул",
+  "block.aestheticseating.simple_chair_warped": "Искажённый стул",
+  "item.aestheticseating.cushion_remover": "Съёмник подушек",
+  "item.aestheticseating.wrench": "Гаечный ключ",
+  "itemgroup.aseattab": "Aesthetic Seating"
+}
