@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-06T19:00:27.2928673	Aesthetic Seating/Block Loot Tables
+// 1.21.1	2024-11-10T14:15:51.1280845	Aesthetic Seating/Block Loot Tables
 80da3358fef6318df29c7d2e9c163f36bc228a8f data\aestheticseating\loot_table\blocks\simple_chair_acacia.json
 5d57a77a7854683fc99a6567ee6fc77a8961d919 data\aestheticseating\loot_table\blocks\simple_chair_warped.json
 e56679b77fab6868d07b2acd0483112dd33da67a data\aestheticseating\loot_table\blocks\simple_chair_hazelnut.json
@@ -11,6 +11,7 @@ d9f1090aa6722020c0365f8440df51e906f2f834 data\aestheticseating\loot_table\blocks
 207f5a7eb807a1b059416eff1f5ca677e997a43b data\aestheticseating\loot_table\blocks\simple_chair_birch.json
 a57feddcf8eb97399d3af709dc79c6dea2719b64 data\aestheticseating\loot_table\blocks\simple_chair_jungle.json
 dbf8db706f9d04c446be03573cde809ee75c58b0 data\aestheticseating\loot_table\blocks\simple_chair_bamboo.json
+fa00f7f98bdfdd70a03d14af6866e3eed59dfce2 data\aestheticseating\loot_table\blocks\simple_chair_fig.json
 3ad851df466af97b259bd0ebba934bc834c778b3 data\aestheticseating\loot_table\blocks\simple_chair_dark_oak.json
 cc9ad15f4bbf41e2a828d08641081d97ae4ef8ea data\aestheticseating\loot_table\blocks\simple_chair_hawthorn.json
 b94392893db20d0e4149480d1cdb3fc285be8258 data\aestheticseating\loot_table\blocks\simple_chair_oak.json

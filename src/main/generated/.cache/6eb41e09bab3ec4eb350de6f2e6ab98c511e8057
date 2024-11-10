@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-06T19:00:27.2867466	Aesthetic Seating/Model Definitions
+// 1.21.1	2024-11-10T14:15:51.122067	Aesthetic Seating/Model Definitions
 47f265b9708a5bee2cc840f45f50af0ff76bb0b1 assets\aestheticseating\models\item\cushion_remover.json
 4ee36451a73613c9593c7e1e5dccbe158be3c402 assets\aestheticseating\models\item\simple_chair_acacia.json
 ff575d719d3a025c4b2dc2398dd4bbf73ea419bc assets\aestheticseating\models\item\simple_chair_crimson.json
@@ -12,6 +12,7 @@ cb9345bbb25e7e681140d7376817caf058512917 assets\aestheticseating\models\item\sim
 3519351737a7d3304db2a38eed7f50280da0244b assets\aestheticseating\models\item\simple_chair_plum.json
 5daa3a4236fc27bbadc247b55faa5abced3ce219 assets\aestheticseating\models\item\simple_chair_mangrove.json
 2e3c704a261359950c7c31a788705fe7dbda1c51 assets\aestheticseating\models\item\simple_chair_oak.json
+61994c0a748c3405053f1b6385c59e67d82d0157 assets\aestheticseating\models\item\simple_chair_fig.json
 3293ec73a38205d5285a2160f5fa332043511bb1 assets\aestheticseating\models\item\simple_chair_mango.json
 cab9c237d7eb1e29083cbbff7b0e131f716ddc8a assets\aestheticseating\models\item\wrench.json
 c21df35759d07068d0019fe9ef77bcab07edb0b6 assets\aestheticseating\models\item\simple_chair_birch.json
