@@ -21,5 +21,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         {
             addDrop(ModBlocks.SIMPLE_CHAIRS.get(name));
         }
+        for(String name : BlockSetsHelper.COLORS)
+        {
+            addDrop(ModBlocks.SETTEES.get(name));
+            addDrop(ModBlocks.CUSHIONS.get(name));
+        }
     }
 }

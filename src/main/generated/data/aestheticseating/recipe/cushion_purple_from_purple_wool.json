@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cushion",
+  "ingredients": [
+    {
+      "item": "minecraft:purple_wool"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "aestheticseating:cushion_purple"
+  }
+}

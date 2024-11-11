@@ -32,6 +32,15 @@ public class ModModelProvider extends FabricModelProvider
             ModJsonHelper.createSimpleChairBlockState(woodName);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
         }
+
+        for(String name : BlockSetsHelper.COLORS)
+        {
+            registerSettee(name);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SETTEES.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/settee_"+name+"_0"));
+
+            ModJsonHelper.createCushionModel(name);
+            blockStateModelGenerator.registerSimpleState(ModBlocks.CUSHIONS.get(name));
+        }
     }
 
     @Override
@@ -47,5 +56,16 @@ public class ModModelProvider extends FabricModelProvider
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_RECLINED_TEMPLATE, colorVariant, woodVariant, true, false);
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_CARPETED_TEMPLATE, colorVariant, woodVariant, false, true);
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_RECLINED_CARPETED_TEMPLATE, colorVariant, woodVariant, true, true);
+    }
+
+    private void registerSettee(String colorVariant)
+    {
+        ModJsonHelper.createSetteeModel(ModJsonTemplates.SETTEE_0_MODEL_TEMPLATE, colorVariant, false, 0);
+        ModJsonHelper.createSetteeModel(ModJsonTemplates.SETTEE_TRANSFORMED_0_MODEL_TEMPLATE, colorVariant,true, 0);
+        ModJsonHelper.createSetteeModel(ModJsonTemplates.SETTEE_1_MODEL_TEMPLATE, colorVariant, false, 1);
+        ModJsonHelper.createSetteeModel(ModJsonTemplates.SETTEE_TRANSFORMED_1_MODEL_TEMPLATE, colorVariant,true, 1);
+        ModJsonHelper.createSetteeModel(ModJsonTemplates.SETTEE_2_MODEL_TEMPLATE, colorVariant, false, 2);
+        ModJsonHelper.createSetteeModel(ModJsonTemplates.SETTEE_TRANSFORMED_2_MODEL_TEMPLATE, colorVariant,true, 2);
+        ModJsonHelper.createSetteeBlockState(colorVariant);
     }
 }

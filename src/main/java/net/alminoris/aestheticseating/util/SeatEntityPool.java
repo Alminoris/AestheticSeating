@@ -18,7 +18,7 @@ public class SeatEntityPool
         return INSTANCE;
     }
 
-    public SeatEntity obtainSeat(World world, BlockPos pos)
+    public SeatEntity obtainSeat(World world, BlockPos pos, double seatY)
     {
         SeatEntity seat = availableSeats.poll();
 
@@ -28,7 +28,7 @@ public class SeatEntityPool
         }
         else
         {
-            seat.setPosition(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+            seat.setPosition(pos.getX() + 0.5, pos.getY()+seatY, pos.getZ() + 0.5);
             seat.cleanupTimer = 0; // Reset cleanup timer to prevent immediate removal
         }
         return seat;

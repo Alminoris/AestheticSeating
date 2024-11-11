@@ -33,6 +33,14 @@ public class ModItemGroups
                                 entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
                             }
                         }
+                        for(String name : BlockSetsHelper.COLORS)
+                        {
+                            entries.add(ModBlocks.SETTEES.get(name));
+                        }
+                        for(String name : BlockSetsHelper.COLORS)
+                        {
+                            entries.add(ModBlocks.CUSHIONS.get(name));
+                        }
                     }).build());
 
     public static void registerItemGroups()

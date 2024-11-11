@@ -1,5 +1,4 @@
 package net.alminoris.aestheticseating.entity.custom;
-import net.alminoris.aestheticseating.entity.ModEntities;
 import net.alminoris.aestheticseating.util.SeatEntityPool;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -12,6 +11,7 @@ public class SeatEntity extends Entity
 {
     private static final int CLEANUP_DELAY = 20; // 5 seconds delay before cleanup if unused
     public int cleanupTimer = 0;
+    private static double seatYPos;
 
     public SeatEntity(EntityType<? extends SeatEntity> type, World world)
     {
@@ -19,10 +19,10 @@ public class SeatEntity extends Entity
         this.noClip = true;
     }
 
-    public static SeatEntity createOrReuse(World world, BlockPos pos)
+    public static SeatEntity createOrReuse(World world, BlockPos pos, double seatY)
     {
-        SeatEntity seat = SeatEntityPool.getInstance().obtainSeat(world, pos);
-        seat.setPosition(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+        SeatEntity seat = SeatEntityPool.getInstance().obtainSeat(world, pos, seatY);
+        seat.setPosition(pos.getX() + 0.5, pos.getY() + seatY, pos.getZ() + 0.5);
         return seat;
     }
 

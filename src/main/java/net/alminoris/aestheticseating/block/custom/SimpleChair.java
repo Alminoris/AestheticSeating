@@ -108,7 +108,7 @@ public class SimpleChair extends Block
                     .stream().findFirst().isPresent();
 
             if (!seatExists) {
-                SeatEntity seat = SeatEntity.createOrReuse(world, pos);
+                SeatEntity seat = SeatEntity.createOrReuse(world, pos, 0.0D);
                 world.spawnEntity(seat);
 
                 player.startRiding(seat, true);
