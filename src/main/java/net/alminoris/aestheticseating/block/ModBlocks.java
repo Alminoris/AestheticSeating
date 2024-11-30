@@ -4,6 +4,7 @@ import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.custom.Cushion;
 import net.alminoris.aestheticseating.block.custom.Settee;
 import net.alminoris.aestheticseating.block.custom.SimpleChair;
+import net.alminoris.aestheticseating.block.custom.SimpleStool;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -22,6 +23,14 @@ public class ModBlocks
         for(String name : BlockSetsHelper.getWoods())
         {
             put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
+        }
+    }};
+
+    public static final Dictionary<String, Block> SIMPLE_STOOLS = new Hashtable<>()
+    {{
+        for(String name : BlockSetsHelper.getWoods())
+        {
+            put(name, registerBlock("simple_stool_"+name, new SimpleStool(name)));
         }
     }};
 

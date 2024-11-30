@@ -28,9 +28,12 @@ public class ModModelProvider extends FabricModelProvider
             for(String name : BlockSetsHelper.COLORS)
             {
                 registerSimpleChair(woodName, name);
+                registerSimpleStool(woodName, name);
             }
             ModJsonHelper.createSimpleChairBlockState(woodName);
+            ModJsonHelper.createSimpleStoolBlockState(woodName);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
         }
 
         for(String name : BlockSetsHelper.COLORS)
@@ -56,6 +59,16 @@ public class ModModelProvider extends FabricModelProvider
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_RECLINED_TEMPLATE, colorVariant, woodVariant, true, false);
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_CARPETED_TEMPLATE, colorVariant, woodVariant, false, true);
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_RECLINED_CARPETED_TEMPLATE, colorVariant, woodVariant, true, true);
+    }
+
+    private void registerSimpleStool(String woodVariant, String colorVariant)
+    {
+        ModJsonHelper.createSimpleStoolModel(ModJsonTemplates.SIMPLE_STOOL_NORMAL_MODEL_TEMPLATE, colorVariant, woodVariant, "normal", false);
+        ModJsonHelper.createSimpleStoolModel(ModJsonTemplates.SIMPLE_STOOL_LATTICEBACK_MODEL_TEMPLATE, colorVariant, woodVariant, "latticeback", false);
+        ModJsonHelper.createSimpleStoolModel(ModJsonTemplates.SIMPLE_STOOL_DESK_MODEL_TEMPLATE, colorVariant, woodVariant, "desk", false);
+        ModJsonHelper.createSimpleStoolModel(ModJsonTemplates.SIMPLE_STOOL_NORMAL_CARPETED_MODEL_TEMPLATE, colorVariant, woodVariant, "normal", true);
+        ModJsonHelper.createSimpleStoolModel(ModJsonTemplates.SIMPLE_STOOL_LATTICEBACK_CARPETED_MODEL_TEMPLATE, colorVariant, woodVariant, "latticeback", true);
+        ModJsonHelper.createSimpleStoolModel(ModJsonTemplates.SIMPLE_STOOL_DESK_CARPETED_MODEL_TEMPLATE, colorVariant, woodVariant, "desk", true);
     }
 
     private void registerSettee(String colorVariant)

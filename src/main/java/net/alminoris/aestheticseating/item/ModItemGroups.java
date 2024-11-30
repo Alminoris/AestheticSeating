@@ -26,11 +26,19 @@ public class ModItemGroups
                         {
                             entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
                         }
+                        for(String name : BlockSetsHelper.WOODS)
+                        {
+                            entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                        }
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
                             for(String name : BlockSetsHelper.EXTRA_WOODS)
                             {
                                 entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
+                            }
+                            for(String name : BlockSetsHelper.EXTRA_WOODS)
+                            {
+                                entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
                             }
                         }
                         for(String name : BlockSetsHelper.COLORS)

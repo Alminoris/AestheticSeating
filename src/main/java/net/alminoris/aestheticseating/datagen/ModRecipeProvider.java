@@ -54,6 +54,10 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerSimpleChair(recipeExporter, ModBlocks.SIMPLE_CHAIRS.get(name),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
+
+            registerSimpleStool(recipeExporter, ModBlocks.SIMPLE_STOOLS.get(name),
+                    Registries.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
+                    Registries.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
         }
 
         for(String name : BlockSetsHelper.COLORS)
@@ -72,6 +76,18 @@ public class ModRecipeProvider extends FabricRecipeProvider
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("#  ")
+                .pattern("###")
+                .pattern("/ /")
+                .input('#', slab)
+                .input('/', log)
+                .criterion(hasItem(slab), conditionsFromItem(slab))
+                .criterion(hasItem(log), conditionsFromItem(log))
+                .offerTo(recipeExporter);
+    }
+
+    private static void registerSimpleStool(RecipeExporter recipeExporter, Block block, Block slab, Block log)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("###")
                 .pattern("/ /")
                 .input('#', slab)

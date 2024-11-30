@@ -132,4 +132,54 @@ public class ModJsonHelper
             e.printStackTrace();
         }
     }
+
+    public static void createSimpleStoolModel(String jsonContent, String colorName, String woodName, String form, boolean isCarpeted)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ AestheticSeating.MOD_ID+"/models/block/" + colorName;
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "simple_stool_" + form + "_" + woodName + (isCarpeted ? "_carpeted" : "") + ".json";
+        File modelFile = new File(directory, fileName);
+
+        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName).replace("WOOD_NAME_VALUE", woodName);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createSimpleStoolBlockState(String woodName)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ AestheticSeating.MOD_ID+"/blockstates";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "simple_stool_" + woodName + ".json";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.SIMPLE_STOOL_BLOCKSTATE_TEMPLATE.replace("WOOD_NAME_VALUE", woodName);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
