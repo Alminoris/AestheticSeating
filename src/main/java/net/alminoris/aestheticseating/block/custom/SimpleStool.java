@@ -1,17 +1,13 @@
 package net.alminoris.aestheticseating.block.custom;
 
-import net.alminoris.aestheticseating.AestheticSeating;
-import net.alminoris.aestheticseating.entity.custom.SeatEntity;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
 import net.minecraft.block.*;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -30,7 +26,7 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SimpleStool extends Block
+public class SimpleStool extends SeatingFurniture
 {
     private static final VoxelShape SEAT = SimpleStool.createCuboidShape(3.2, 0, 3, 12.8, 8, 13);
 
@@ -107,7 +103,7 @@ public class SimpleStool extends Block
 
     public SimpleStool(String name)
     {
-        super(Settings.copy(Blocks.OAK_PLANKS));
+        super(Settings.copy(Blocks.OAK_PLANKS), 0.0D);
         this.name = name;
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(FORM, Form.NORMAL).with(CARPETED, false).with(CARPET_COLOR, CarpetColor.BLACK));
     }
@@ -122,28 +118,6 @@ public class SimpleStool extends Block
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder)
     {
         builder.add(FACING, FORM, CARPETED, CARPET_COLOR);
-    }
-
-    @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit)
-    {
-        if (world.isClient)
-        {
-            return ActionResult.SUCCESS;
-        }
-
-        if (!player.hasVehicle()) {
-            boolean seatExists = world.getEntitiesByClass(SeatEntity.class, new Box(pos), Entity::isAlive)
-                    .stream().findFirst().isPresent();
-
-            if (!seatExists) {
-                SeatEntity seat = SeatEntity.createOrReuse(world, pos, 0.0D);
-                world.spawnEntity(seat);
-
-                player.startRiding(seat, true);
-            }
-        }
-        return ActionResult.SUCCESS;
     }
 
     @Override
@@ -300,11 +274,5 @@ public class SimpleStool extends Block
         boxes.add(SEAT.getBoundingBox());
 
         return VoxelShapeHelper.rotateShape(boxes, direction);
-    }
-
-    @Override
-    public BlockRenderType getRenderType(BlockState state)
-    {
-        return BlockRenderType.MODEL;
     }
 }

@@ -30,10 +30,20 @@ public class ModModelProvider extends FabricModelProvider
                 registerSimpleChair(woodName, name);
                 registerSimpleStool(woodName, name);
             }
+            registerSimpleBench(woodName);
             ModJsonHelper.createSimpleChairBlockState(woodName);
+            ModJsonHelper.createSimpleBenchBlockState(woodName);
             ModJsonHelper.createSimpleStoolBlockState(woodName);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+        }
+
+        for(String name : BlockSetsHelper.STONES)
+        {
+            registerStoneBench(name);
+            ModJsonHelper.createStoneBenchBlockState(name);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.STONE_BENCHES.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/stone_bench_"+name));
         }
 
         for(String name : BlockSetsHelper.COLORS)
@@ -59,6 +69,27 @@ public class ModModelProvider extends FabricModelProvider
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_RECLINED_TEMPLATE, colorVariant, woodVariant, true, false);
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_CARPETED_TEMPLATE, colorVariant, woodVariant, false, true);
         ModJsonHelper.createSimpleChairModel(ModJsonTemplates.SIMPLE_CHAIR_RECLINED_CARPETED_TEMPLATE, colorVariant, woodVariant, true, true);
+    }
+
+    private void registerSimpleBench(String woodVariant)
+    {
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_NORMAL_MODEL, woodVariant, "normal", false);
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_CENTER_MODEL, woodVariant, "center", false);
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_LEFT_MODEL, woodVariant, "left", false);
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_RIGHT_MODEL, woodVariant, "right", false);
+
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_NORMAL_BACKREST_MODEL, woodVariant, "normal", true);
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_CENTER_BACKREST_MODEL, woodVariant, "center", true);
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_LEFT_BACKREST_MODEL, woodVariant, "left", true);
+        ModJsonHelper.createSimpleBenchModel(ModJsonTemplates.SIMPLE_BENCH_RIGHT_BACKREST_MODEL, woodVariant, "right", true);
+    }
+
+    private void registerStoneBench(String stoneVariant)
+    {
+        ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_NORMAL_MODEL, stoneVariant, "normal");
+        ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_CENTER_MODEL, stoneVariant, "center");
+        ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_LEFT_MODEL, stoneVariant, "left");
+        ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_RIGHT_MODEL, stoneVariant, "right");
     }
 
     private void registerSimpleStool(String woodVariant, String colorVariant)

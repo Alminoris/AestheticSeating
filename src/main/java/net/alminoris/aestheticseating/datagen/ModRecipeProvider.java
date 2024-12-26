@@ -1,9 +1,9 @@
 package net.alminoris.aestheticseating.datagen;
 
+import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.ModBlocks;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
-import net.alminoris.aestheticseating.util.helper.ModJsonHelper;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
@@ -58,6 +58,10 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerSimpleStool(recipeExporter, ModBlocks.SIMPLE_STOOLS.get(name),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
+
+            registerSimpleBench(recipeExporter, ModBlocks.SIMPLE_BENCHES.get(name),
+                    Registries.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
+                    Registries.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
         }
 
         for(String name : BlockSetsHelper.COLORS)
@@ -70,6 +74,32 @@ public class ModRecipeProvider extends FabricRecipeProvider
         {
             offerSingleOutputShapelessRecipe(recipeExporter, ModBlocks.CUSHIONS.get(name), Registries.BLOCK.get(Identifier.of("minecraft", name+"_wool")), "cushion");
         }
+
+        for(String name : BlockSetsHelper.STONES)
+        {
+            if (!name.equals("blackstonebricks") && !name.equals("quartz") && !name.equals("basalt"))
+            {
+                registerStoneBench(recipeExporter,
+                        Registries.BLOCK.get(Identifier.of("minecraft", "polished_"+name)),
+                        Registries.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                        ModBlocks.STONE_BENCHES.get(name));
+            }
+        }
+
+        registerStoneBench(recipeExporter,
+                Registries.BLOCK.get(Identifier.of("minecraft", "polished_blackstone_bricks")),
+                Registries.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                ModBlocks.STONE_BENCHES.get("blackstonebricks"));
+
+        registerStoneBench(recipeExporter,
+                Registries.BLOCK.get(Identifier.of("minecraft", "smooth_basalt")),
+                Registries.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                ModBlocks.STONE_BENCHES.get("basalt"));
+
+        registerStoneBench(recipeExporter,
+                Registries.BLOCK.get(Identifier.of("minecraft", "quartz_block")),
+                Registries.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                ModBlocks.STONE_BENCHES.get("quartz"));
     }
 
     private static void registerSimpleChair(RecipeExporter recipeExporter, Block block, Block slab, Block log)
@@ -82,6 +112,30 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .input('/', log)
                 .criterion(hasItem(slab), conditionsFromItem(slab))
                 .criterion(hasItem(log), conditionsFromItem(log))
+                .offerTo(recipeExporter);
+    }
+
+    private static void registerSimpleBench(RecipeExporter recipeExporter, Block block, Block slab, Block log)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
+                .pattern("##")
+                .pattern("//")
+                .input('#', slab)
+                .input('/', log)
+                .criterion(hasItem(slab), conditionsFromItem(slab))
+                .criterion(hasItem(log), conditionsFromItem(log))
+                .offerTo(recipeExporter);
+    }
+
+    private static void registerStoneBench(RecipeExporter recipeExporter, Block base, Block legs, Block result)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result, 1)
+                .pattern("##")
+                .pattern("//")
+                .input('#', base)
+                .input('/', legs)
+                .criterion(hasItem(base), conditionsFromItem(base))
+                .criterion(hasItem(legs), conditionsFromItem(legs))
                 .offerTo(recipeExporter);
     }
 

@@ -10,6 +10,11 @@ public class BlockSetsHelper
                     "cyan", "light_blue", "green", "lime"
             };
 
+    public static final String[] STONES =
+            {
+                    "tuff", "blackstone", "andesite", "diorite", "granite",  "deepslate", "basalt", "quartz", "blackstonebricks"
+            };
+
     public static final String[] WOODS =
             {
                     "oak", "birch", "spruce", "jungle", "acacia", "dark_oak",
@@ -18,7 +23,7 @@ public class BlockSetsHelper
 
     public static final String[] EXTRA_WOODS =
             {
-                    "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry"
+                    "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry", "bauhinia", "pine"
             };
 
     public static String[] getWoods()

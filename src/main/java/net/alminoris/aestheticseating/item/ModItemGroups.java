@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -30,6 +29,14 @@ public class ModItemGroups
                         {
                             entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
                         }
+                        for(String name : BlockSetsHelper.WOODS)
+                        {
+                            entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                        }
+                        for(String name : BlockSetsHelper.STONES)
+                        {
+                            entries.add(ModBlocks.STONE_BENCHES.get(name));
+                        }
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
                             for(String name : BlockSetsHelper.EXTRA_WOODS)
@@ -39,6 +46,10 @@ public class ModItemGroups
                             for(String name : BlockSetsHelper.EXTRA_WOODS)
                             {
                                 entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                            }
+                            for(String name : BlockSetsHelper.EXTRA_WOODS)
+                            {
+                                entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
                             }
                         }
                         for(String name : BlockSetsHelper.COLORS)
