@@ -25,9 +25,8 @@ public class ModItemGroups
                     "bauhinia", "pine", "fir", "cedar"
             };
 
-    public static final ItemGroup ASEAT_TAB = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(AestheticSeating.MOD_ID, "aseattab"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.aseattab"))
+    public static final ItemGroup ASEAT_TAB = FabricItemGroup.builder(new Identifier(AestheticSeating.MOD_ID, "aseattab"))
+            .displayName(Text.translatable("itemgroup.aseattab"))
                     .icon(() -> new ItemStack(ModBlocks.SIMPLE_CHAIRS.get("oak"))).entries((displayContext, entries) ->
                     {
                         entries.add(ModItems.CUSHION_REMOVER);
@@ -90,7 +89,7 @@ public class ModItemGroups
                         {
                             entries.add(ModBlocks.CUSHIONS.get(name));
                         }
-                    }).build());
+                    }).build();
 
     public static void registerItemGroups()
     {
