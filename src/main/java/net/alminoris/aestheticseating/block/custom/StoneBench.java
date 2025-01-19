@@ -47,7 +47,7 @@ public class StoneBench extends SeatingFurniture
 
     public StoneBench()
     {
-        super(Settings.copy(Blocks.OAK_PLANKS), 0.0D);
+        super(Settings.copy(Blocks.OAK_PLANKS), -0.1D);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(VARIANT, Variant.NORMAL));
     }
 
@@ -80,7 +80,7 @@ public class StoneBench extends SeatingFurniture
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
     {
         return updateBenchVariant(state, world, pos);
     }

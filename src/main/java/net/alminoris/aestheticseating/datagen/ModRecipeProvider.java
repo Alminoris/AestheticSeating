@@ -8,7 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -17,16 +17,17 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider
 {
-    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture)
+    public ModRecipeProvider(FabricDataOutput output)
     {
-        super(output, registriesFuture);
+        super(output);
     }
 
     @Override
-    public void generate(RecipeExporter recipeExporter)
+    public void generate(Consumer<RecipeJsonProvider> recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModItems.CUSHION_REMOVER, 1)
                 .pattern(" ##")
@@ -106,7 +107,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 ModBlocks.STONE_BENCHES.get("quartz"));
     }
 
-    private static void registerSimpleChair(RecipeExporter recipeExporter, Block block, Block slab, Block log)
+    private static void registerSimpleChair(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block slab, Block log)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("#  ")
@@ -119,7 +120,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
-    private static void registerSimpleBench(RecipeExporter recipeExporter, Block block, Block slab, Block log)
+    private static void registerSimpleBench(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block slab, Block log)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("##")
@@ -131,7 +132,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
-    private static void registerStoneBench(RecipeExporter recipeExporter, Block base, Block legs, Block result)
+    private static void registerStoneBench(Consumer<RecipeJsonProvider> recipeExporter, Block base, Block legs, Block result)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, result, 1)
                 .pattern("##")
@@ -143,7 +144,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
-    private static void registerSimpleStool(RecipeExporter recipeExporter, Block block, Block slab, Block log)
+    private static void registerSimpleStool(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block slab, Block log)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("###")
@@ -155,7 +156,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
-    private static void registerSettee(RecipeExporter recipeExporter, Block block, Block wool)
+    private static void registerSettee(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block wool)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("# #")
@@ -165,7 +166,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
-    private static void registerSofa(RecipeExporter recipeExporter, Block block, Block wool)
+    private static void registerSofa(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block wool)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
                 .pattern("##")

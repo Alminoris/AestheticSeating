@@ -38,7 +38,7 @@ public class Settee extends SeatingFurniture
 
     public Settee(String name)
     {
-        super(Settings.copy(Blocks.BLACK_WOOL), -0.25D);
+        super(Settings.copy(Blocks.BLACK_WOOL), -0.35D);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(TRANSFORMED, false).with(VARIANT, 0));
         this.name = name;
     }
@@ -56,11 +56,12 @@ public class Settee extends SeatingFurniture
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     {
         boolean currentTransformed = state.get(TRANSFORMED);
         int currentVariant = state.get(VARIANT);
         Direction currentFacing = state.get(FACING);
+        ItemStack stack = player.getStackInHand(hand);
 
         if (stack.getItem() == ModItems.WRENCH)
         {
@@ -77,7 +78,7 @@ public class Settee extends SeatingFurniture
                     stack.decrement(1);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.getItem() == ModBlocks.CUSHIONS.get(name).asItem() && currentVariant < 2)
@@ -92,7 +93,7 @@ public class Settee extends SeatingFurniture
                 stack.decrement(1);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.getItem() == ModItems.CUSHION_REMOVER && currentVariant > 0)
@@ -114,10 +115,10 @@ public class Settee extends SeatingFurniture
                     player.dropItem(carpetStack, false);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hand, hit);
     }
 
     @Override

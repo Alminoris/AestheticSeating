@@ -77,7 +77,7 @@ public class SimpleChair extends SeatingFurniture
 
     public SimpleChair()
     {
-        super(Settings.copy(Blocks.OAK_PLANKS), 0.0D);
+        super(Settings.copy(Blocks.OAK_PLANKS), -0.1D);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(RECLINED, false).with(CARPETED, false).with(CARPET_COLOR, CarpetColor.BLACK));
     }
 
@@ -94,10 +94,11 @@ public class SimpleChair extends SeatingFurniture
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     {
         boolean currentReclined = state.get(RECLINED);
         boolean currentCarpeted = state.get(CARPETED);
+        ItemStack stack = player.getStackInHand(hand);
 
         if (stack.isIn(ItemTags.WOOL_CARPETS) && !currentCarpeted)
         {
@@ -114,7 +115,7 @@ public class SimpleChair extends SeatingFurniture
                 stack.decrement(1);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.getItem() == ModItems.WRENCH)
@@ -135,7 +136,7 @@ public class SimpleChair extends SeatingFurniture
                     stack.decrement(1);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.getItem() == ModItems.CUSHION_REMOVER)
@@ -162,10 +163,10 @@ public class SimpleChair extends SeatingFurniture
                     player.dropItem(carpetStack, false);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hand, hit);
     }
 
     @Override

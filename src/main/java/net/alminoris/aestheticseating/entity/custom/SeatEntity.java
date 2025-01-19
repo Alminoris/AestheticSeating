@@ -2,7 +2,6 @@ package net.alminoris.aestheticseating.entity.custom;
 import net.alminoris.aestheticseating.util.SeatEntityPool;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.data.DataTracker;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -47,7 +46,7 @@ public class SeatEntity extends Entity
     }
 
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) { }
+    protected void initDataTracker() {}
 
     @Override
     protected void readCustomDataFromNbt(NbtCompound nbt) {}

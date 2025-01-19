@@ -103,7 +103,7 @@ public class SimpleStool extends SeatingFurniture
 
     public SimpleStool(String name)
     {
-        super(Settings.copy(Blocks.OAK_PLANKS), 0.0D);
+        super(Settings.copy(Blocks.OAK_PLANKS), -0.1D);
         this.name = name;
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(FORM, Form.NORMAL).with(CARPETED, false).with(CARPET_COLOR, CarpetColor.BLACK));
     }
@@ -121,10 +121,11 @@ public class SimpleStool extends SeatingFurniture
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     {
         Form currentForm = state.get(FORM);
         boolean currentCarpeted = state.get(CARPETED);
+        ItemStack stack = player.getStackInHand(hand);
 
         if (stack.isIn(ItemTags.WOOL_CARPETS) && !currentCarpeted)
         {
@@ -141,7 +142,7 @@ public class SimpleStool extends SeatingFurniture
                 stack.decrement(1);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.isIn(ItemTags.AXES))
@@ -166,7 +167,7 @@ public class SimpleStool extends SeatingFurniture
                 }
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if ((stack.getItem() == ModItems.WRENCH) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
@@ -198,7 +199,7 @@ public class SimpleStool extends SeatingFurniture
                 }
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.getItem() == ModItems.CUSHION_REMOVER)
@@ -225,10 +226,10 @@ public class SimpleStool extends SeatingFurniture
                     player.dropItem(carpetStack, false);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hand, hit);
     }
 
     private String checkForWrenching(String name)

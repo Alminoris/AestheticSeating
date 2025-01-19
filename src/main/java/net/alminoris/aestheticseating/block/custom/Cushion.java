@@ -11,7 +11,7 @@ public class Cushion extends SeatingFurniture
 
     public Cushion()
     {
-        super(Settings.copy(Blocks.BLACK_WOOL), -0.25D);
+        super(Settings.copy(Blocks.BLACK_WOOL), -0.35D);
     }
 
     @Override

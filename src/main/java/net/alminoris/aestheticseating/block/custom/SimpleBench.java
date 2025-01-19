@@ -55,7 +55,7 @@ public class SimpleBench extends SeatingFurniture
 
     public SimpleBench(String name)
     {
-        super(Settings.copy(Blocks.OAK_PLANKS), 0.0D);
+        super(Settings.copy(Blocks.OAK_PLANKS), -0.1D);
         this.name = name;
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(VARIANT, Variant.NORMAL).with(BACKREST, false));
     }
@@ -89,10 +89,11 @@ public class SimpleBench extends SeatingFurniture
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     {
         Variant currentVariant = state.get(VARIANT);
         boolean currentBackrest = state.get(BACKREST);
+        ItemStack stack = player.getStackInHand(hand);
 
         if (stack.isIn(ItemTags.AXES))
         {
@@ -114,7 +115,7 @@ public class SimpleBench extends SeatingFurniture
                 }
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if ((!currentBackrest) && (stack.getItem() == ModItems.WRENCH) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
@@ -144,10 +145,10 @@ public class SimpleBench extends SeatingFurniture
                 }
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hand, hit);
     }
 
     private String checkForWrenching(String name)
@@ -164,7 +165,7 @@ public class SimpleBench extends SeatingFurniture
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
     {
         return updateBenchVariant(state, world, pos);
     }

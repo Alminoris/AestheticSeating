@@ -12,8 +12,8 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.*;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -60,7 +60,7 @@ public class Sofa extends SeatingFurniture
 
     public Sofa(String name)
     {
-        super(Settings.copy(Blocks.BLACK_WOOL), -0.05D);
+        super(Settings.copy(Blocks.BLACK_WOOL), -0.15D);
         this.name = name;
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(VARIANT, Variant.NORMAL).with(CUSHION, false));
     }
@@ -98,11 +98,12 @@ public class Sofa extends SeatingFurniture
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     {
         boolean currentCushion = state.get(CUSHION);
         Variant currentVariant = state.get(VARIANT);
         Direction currentFacing = state.get(FACING);
+        ItemStack stack = player.getStackInHand(hand);
 
         if (stack.getItem() == ModBlocks.CUSHIONS.get(name).asItem() && !currentCushion)
         {
@@ -116,7 +117,7 @@ public class Sofa extends SeatingFurniture
                 stack.decrement(1);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
         if (stack.getItem() == ModItems.CUSHION_REMOVER && currentCushion)
@@ -138,14 +139,14 @@ public class Sofa extends SeatingFurniture
                     player.dropItem(carpetStack, false);
             }
 
-            return ItemActionResult.SUCCESS;
+            return ActionResult.SUCCESS;
         }
 
-        return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+        return super.onUse(state, world, pos, player, hand, hit);
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
     {
         return updateSofaVariant(world, state, pos);
     }
