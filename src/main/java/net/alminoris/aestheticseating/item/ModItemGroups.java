@@ -14,6 +14,17 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups
 {
+    public static final String[] EXTRA_WOODS_WF =
+            {
+                    "olive", "tamarisk"
+            };
+
+    public static final String[] EXTRA_WOODS_AN =
+            {
+                    "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry",
+                    "bauhinia", "pine", "fir", "cedar"
+            };
+
     public static final ItemGroup ASEAT_TAB = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(AestheticSeating.MOD_ID, "aseattab"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.aseattab"))
@@ -39,18 +50,37 @@ public class ModItemGroups
                         }
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : BlockSetsHelper.EXTRA_WOODS)
+                            for(String name : EXTRA_WOODS_AN)
                             {
                                 entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
                             }
-                            for(String name : BlockSetsHelper.EXTRA_WOODS)
+                            for(String name : EXTRA_WOODS_AN)
                             {
                                 entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
                             }
-                            for(String name : BlockSetsHelper.EXTRA_WOODS)
+                            for(String name : EXTRA_WOODS_AN)
                             {
                                 entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
                             }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+                        {
+                            for(String name : EXTRA_WOODS_WF)
+                            {
+                                entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
+                            }
+                            for(String name : EXTRA_WOODS_WF)
+                            {
+                                entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                            }
+                            for(String name : EXTRA_WOODS_WF)
+                            {
+                                entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                        }
+                        for(String name : BlockSetsHelper.COLORS)
+                        {
+                            entries.add(ModBlocks.SOFAS.get(name));
                         }
                         for(String name : BlockSetsHelper.COLORS)
                         {

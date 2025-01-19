@@ -1167,6 +1167,73 @@ public class ModJsonTemplates
             }
             """;
 
+    public static final String SOFA_BLOCKSTATE_TEMPLATE = """
+            {
+              "variants":
+              {
+                "facing=north,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE" },
+                "facing=south,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE", "y": 180 },
+                "facing=west,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE", "y": 270 },
+                "facing=east,variant=normal,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE", "y": 90 },
+            
+                "facing=north,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center" },
+                "facing=south,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center", "y": 180 },
+                "facing=west,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center", "y": 270 },
+                "facing=east,variant=center,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center", "y": 90 },
+            
+                "facing=north,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left" },
+                "facing=south,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left", "y": 180 },
+                "facing=west,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left", "y": 270 },
+                "facing=east,variant=left,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left", "y": 90 },
+            
+                "facing=north,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right" },
+                "facing=south,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right", "y": 180 },
+                "facing=west,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right", "y": 270 },
+                "facing=east,variant=right,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right", "y": 90 },
+            
+                "facing=north,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner" },
+                "facing=south,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner", "y": 180 },
+                "facing=west,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner", "y": 270 },
+                "facing=east,variant=leftcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner", "y": 90 },
+            
+                "facing=north,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner" },
+                "facing=south,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner", "y": 180 },
+                "facing=west,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner", "y": 270 },
+                "facing=east,variant=rightcorner,cushion=false": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner", "y": 90 },
+            
+                "facing=north,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_cushion" },
+                "facing=south,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_cushion", "y": 180 },
+                "facing=west,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_cushion", "y": 270 },
+                "facing=east,variant=normal,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_cushion", "y": 90 },
+            
+                "facing=north,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center_cushion" },
+                "facing=south,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center_cushion", "y": 180 },
+                "facing=west,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center_cushion", "y": 270 },
+                "facing=east,variant=center,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_center_cushion", "y": 90 },
+            
+                "facing=north,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left_cushion" },
+                "facing=south,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left_cushion", "y": 180 },
+                "facing=west,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left_cushion", "y": 270 },
+                "facing=east,variant=left,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_left_cushion", "y": 90 },
+            
+                "facing=north,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right_cushion" },
+                "facing=south,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right_cushion", "y": 180 },
+                "facing=west,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right_cushion", "y": 270 },
+                "facing=east,variant=right,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_right_cushion", "y": 90 },
+            
+                "facing=north,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner_cushion" },
+                "facing=south,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner_cushion", "y": 180 },
+                "facing=west,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner_cushion", "y": 270 },
+                "facing=east,variant=leftcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_leftcorner_cushion", "y": 90 },
+            
+                "facing=north,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner_cushion" },
+                "facing=south,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner_cushion", "y": 180 },
+                "facing=west,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner_cushion", "y": 270 },
+                "facing=east,variant=rightcorner,cushion=true": { "model": "aestheticseating:block/sofa_COLOR_NAME_VALUE_rightcorner_cushion", "y": 90 }
+              }
+            }
+            """;
+
     public static final String SETTEE_0_MODEL_TEMPLATE = """
             {
             	"credit": "Made with Blockbench",
@@ -6736,6 +6803,1552 @@ public class ModJsonTemplates
              			]
              		}
              	]
+            }
+            """;
+
+    public static final String SOFA_NORMAL_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [1, 2, 1],
+            			"to": [15, 7, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 7, 1],
+            			"to": [15, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1.25, 7, 5],
+            			"to": [4.75, 10.5, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3.25, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+            				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+            				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+            				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+            				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+            				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [11.25, 7, 5],
+            			"to": [14.75, 10.5, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [12.75, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+            				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+            				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+            				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+            				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+            				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 0, 2],
+            			"to": [4, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [3, 8.25, 3.5, 8.75], "texture": "#0"},
+            				"east": {"uv": [4, 8.75, 4.5, 9.25], "texture": "#0"},
+            				"south": {"uv": [4.5, 8.75, 5, 9.25], "texture": "#0"},
+            				"west": {"uv": [5, 8.75, 5.5, 9.25], "texture": "#0"},
+            				"up": {"uv": [9.5, 5.5, 9, 5], "texture": "#0"},
+            				"down": {"uv": [9.5, 5.5, 9, 6], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [12, 0, 2],
+            			"to": [14, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [9, 6, 9.5, 6.5], "texture": "#0"},
+            				"east": {"uv": [9, 6.5, 9.5, 7], "texture": "#0"},
+            				"south": {"uv": [9, 7, 9.5, 7.5], "texture": "#0"},
+            				"west": {"uv": [9, 7.5, 9.5, 8], "texture": "#0"},
+            				"up": {"uv": [9.5, 8.5, 9, 8], "texture": "#0"},
+            				"down": {"uv": [9.5, 8.5, 9, 9], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [12, 0, 12],
+            			"to": [14, 2, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13, 1, 13]},
+            			"faces": {
+            				"north": {"uv": [9, 9, 9.5, 9.5], "texture": "#0"},
+            				"east": {"uv": [1, 9.25, 1.5, 9.75], "texture": "#0"},
+            				"south": {"uv": [1.5, 9.25, 2, 9.75], "texture": "#0"},
+            				"west": {"uv": [2, 9.25, 2.5, 9.75], "texture": "#0"},
+            				"up": {"uv": [9.75, 2.5, 9.25, 2], "texture": "#0"},
+            				"down": {"uv": [3, 9.25, 2.5, 9.75], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 0, 12],
+            			"to": [4, 2, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3, 1, 13]},
+            			"faces": {
+            				"north": {"uv": [9.25, 2.5, 9.75, 3], "texture": "#0"},
+            				"east": {"uv": [9.25, 3, 9.75, 3.5], "texture": "#0"},
+            				"south": {"uv": [9.25, 3.5, 9.75, 4], "texture": "#0"},
+            				"west": {"uv": [4, 9.25, 4.5, 9.75], "texture": "#0"},
+            				"up": {"uv": [5, 9.75, 4.5, 9.25], "texture": "#0"},
+            				"down": {"uv": [5.5, 9.25, 5, 9.75], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5, 6, 7]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_CENTER_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [0, 2, 1],
+            			"to": [16, 7, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0, 7, 1],
+            			"to": [16, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_LEFT_MODEL = """
+            {
+             	"credit": "Made with Blockbench",
+             	"texture_size": [64, 64],
+             	"textures": {
+             		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+             		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+             	},
+             	"elements": [
+             		{
+             			"from": [0, 2, 1],
+             			"to": [16, 7, 15],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 4, 0]},
+             			"faces": {
+             				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+             				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+             				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+             				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+             				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+             				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [0, 7, 1],
+             			"to": [16, 15, 5],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [7, 11, 3]},
+             			"faces": {
+             				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+             				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+             				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+             				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+             				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+             				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [0.25, 7, 5],
+             			"to": [3.75, 10.5, 14],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [2.25, 9, 9.5]},
+             			"faces": {
+             				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+             				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+             				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+             				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+             				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+             				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [1, 0, 2],
+             			"to": [3, 2, 4],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [2, 1, 3]},
+             			"faces": {
+             				"north": {"uv": [3, 8.25, 3.5, 8.75], "texture": "#0"},
+             				"east": {"uv": [4, 8.75, 4.5, 9.25], "texture": "#0"},
+             				"south": {"uv": [4.5, 8.75, 5, 9.25], "texture": "#0"},
+             				"west": {"uv": [5, 8.75, 5.5, 9.25], "texture": "#0"},
+             				"up": {"uv": [9.5, 5.5, 9, 5], "texture": "#0"},
+             				"down": {"uv": [9.5, 5.5, 9, 6], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [1, 0, 12],
+             			"to": [3, 2, 14],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [2, 1, 13]},
+             			"faces": {
+             				"north": {"uv": [9.25, 2.5, 9.75, 3], "texture": "#0"},
+             				"east": {"uv": [9.25, 3, 9.75, 3.5], "texture": "#0"},
+             				"south": {"uv": [9.25, 3.5, 9.75, 4], "texture": "#0"},
+             				"west": {"uv": [4, 9.25, 4.5, 9.75], "texture": "#0"},
+             				"up": {"uv": [5, 9.75, 4.5, 9.25], "texture": "#0"},
+             				"down": {"uv": [5.5, 9.25, 5, 9.75], "texture": "#0"}
+             			}
+             		}
+             	],
+             	"display": {
+             		"thirdperson_righthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"thirdperson_lefthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"firstperson_righthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"firstperson_lefthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"ground": {
+             			"translation": [0, 1.5, 0],
+             			"scale": [0.4, 0.4, 0.4]
+             		},
+             		"gui": {
+             			"rotation": [20, -45, 0],
+             			"translation": [0, 0.25, 0],
+             			"scale": [0.6, 0.6, 0.6]
+             		},
+             		"fixed": {
+             			"rotation": [0, 90, 0],
+             			"translation": [0, 0, 0.75],
+             			"scale": [0.6, 0.6, 0.6]
+             		}
+             	},
+             	"groups": [
+             		{
+             			"name": "sofa",
+             			"origin": [8, 8, 8],
+             			"color": 0,
+             			"children": [0, 1, 2, 3, 4]
+             		}
+             	]
+            }
+            """;
+
+    public static final String SOFA_RIGHT_MODEL = """
+            {
+             	"credit": "Made with Blockbench",
+             	"texture_size": [64, 64],
+             	"textures": {
+             		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+             		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+             	},
+             	"elements": [
+             		{
+             			"from": [0, 2, 1],
+             			"to": [16, 7, 15],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [1, 4, 0]},
+             			"faces": {
+             				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+             				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+             				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+             				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+             				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+             				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [0, 7, 1],
+             			"to": [16, 15, 5],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [9, 11, 3]},
+             			"faces": {
+             				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+             				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+             				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+             				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+             				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+             				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [12.25, 7, 5],
+             			"to": [15.75, 10.5, 14],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [13.75, 9, 9.5]},
+             			"faces": {
+             				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+             				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+             				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+             				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+             				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+             				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [13, 0, 2],
+             			"to": [15, 2, 4],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [14, 1, 3]},
+             			"faces": {
+             				"north": {"uv": [9, 6, 9.5, 6.5], "texture": "#0"},
+             				"east": {"uv": [9, 6.5, 9.5, 7], "texture": "#0"},
+             				"south": {"uv": [9, 7, 9.5, 7.5], "texture": "#0"},
+             				"west": {"uv": [9, 7.5, 9.5, 8], "texture": "#0"},
+             				"up": {"uv": [9.5, 8.5, 9, 8], "texture": "#0"},
+             				"down": {"uv": [9.5, 8.5, 9, 9], "texture": "#0"}
+             			}
+             		},
+             		{
+             			"from": [13, 0, 12],
+             			"to": [15, 2, 14],
+             			"rotation": {"angle": 0, "axis": "y", "origin": [14, 1, 13]},
+             			"faces": {
+             				"north": {"uv": [9, 9, 9.5, 9.5], "texture": "#0"},
+             				"east": {"uv": [1, 9.25, 1.5, 9.75], "texture": "#0"},
+             				"south": {"uv": [1.5, 9.25, 2, 9.75], "texture": "#0"},
+             				"west": {"uv": [2, 9.25, 2.5, 9.75], "texture": "#0"},
+             				"up": {"uv": [9.75, 2.5, 9.25, 2], "texture": "#0"},
+             				"down": {"uv": [3, 9.25, 2.5, 9.75], "texture": "#0"}
+             			}
+             		}
+             	],
+             	"display": {
+             		"thirdperson_righthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"thirdperson_lefthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"firstperson_righthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"firstperson_lefthand": {
+             			"translation": [3.5, 4, -1.5],
+             			"scale": [0.7, 0.7, 0.7]
+             		},
+             		"ground": {
+             			"translation": [0, 1.5, 0],
+             			"scale": [0.4, 0.4, 0.4]
+             		},
+             		"gui": {
+             			"rotation": [20, -45, 0],
+             			"translation": [0, 0.25, 0],
+             			"scale": [0.6, 0.6, 0.6]
+             		},
+             		"fixed": {
+             			"rotation": [0, 90, 0],
+             			"translation": [0, 0, 0.75],
+             			"scale": [0.6, 0.6, 0.6]
+             		}
+             	},
+             	"groups": [
+             		{
+             			"name": "sofa",
+             			"origin": [8, 8, 8],
+             			"color": 0,
+             			"children": [0, 1, 2, 3, 4]
+             		}
+             	]
+            }
+            """;
+
+    public static final String SOFA_LEFTCORNER_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [1, 2, 1],
+            			"to": [15, 7, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 2.0025, 1.001],
+            			"to": [16, 6.9975, 15.002],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [1, 4, 0.1]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 7, 1],
+            			"to": [16, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 11, 5],
+            			"to": [5, 15, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2.95, 13.5, 9.5]},
+            			"faces": {
+            				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+            				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+            				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+            				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+            				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+            				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 7, 5],
+            			"to": [5, 11, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2.25, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+            				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+            				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+            				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+            				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+            				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 0, 2],
+            			"to": [4, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [3, 8.25, 3.5, 8.75], "texture": "#0"},
+            				"east": {"uv": [4, 8.75, 4.5, 9.25], "texture": "#0"},
+            				"south": {"uv": [4.5, 8.75, 5, 9.25], "texture": "#0"},
+            				"west": {"uv": [5, 8.75, 5.5, 9.25], "texture": "#0"},
+            				"up": {"uv": [9.5, 5.5, 9, 5], "texture": "#0"},
+            				"down": {"uv": [9.5, 5.5, 9, 6], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_RIGHTCORNER_MODEL = """
+            {
+              	"credit": "Made with Blockbench",
+              	"texture_size": [64, 64],
+              	"textures": {
+              		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+              		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+              	},
+              	"elements": [
+              		{
+              			"from": [1, 2, 1.001],
+              			"to": [15, 7, 16.001],
+              			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+              			"faces": {
+              				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+              				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+              				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+              				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+              				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+              				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+              			}
+              		},
+              		{
+              			"from": [0, 2.0025, 1],
+              			"to": [14, 6.9975, 15],
+              			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 4.1, 0]},
+              			"faces": {
+              				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+              				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+              				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+              				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+              				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+              				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+              			}
+              		},
+              		{
+              			"from": [0, 7, 1],
+              			"to": [15, 15, 5],
+              			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+              			"faces": {
+              				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+              				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+              				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+              				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+              				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+              				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+              			}
+              		},
+              		{
+              			"from": [11, 11, 5],
+              			"to": [15, 15, 16],
+              			"rotation": {"angle": 0, "axis": "y", "origin": [13.45, 13.5, 9.5]},
+              			"faces": {
+              				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+              				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+              				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+              				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+              				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+              				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+              			}
+              		},
+              		{
+              			"from": [11, 7, 5],
+              			"to": [15, 11, 16],
+              			"rotation": {"angle": 0, "axis": "y", "origin": [12.75, 9, 9.5]},
+              			"faces": {
+              				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+              				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+              				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+              				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+              				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+              				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+              			}
+              		},
+              		{
+              			"from": [12, 0, 2],
+              			"to": [14, 2, 4],
+              			"rotation": {"angle": 0, "axis": "y", "origin": [13, 1, 3]},
+              			"faces": {
+              				"north": {"uv": [9, 6, 9.5, 6.5], "texture": "#0"},
+              				"east": {"uv": [9, 6.5, 9.5, 7], "texture": "#0"},
+              				"south": {"uv": [9, 7, 9.5, 7.5], "texture": "#0"},
+              				"west": {"uv": [9, 7.5, 9.5, 8], "texture": "#0"},
+              				"up": {"uv": [9.5, 8.5, 9, 8], "texture": "#0"},
+              				"down": {"uv": [9.5, 8.5, 9, 9], "texture": "#0"}
+              			}
+              		}
+              	],
+              	"display": {
+              		"thirdperson_righthand": {
+              			"translation": [3.5, 4, -1.5],
+              			"scale": [0.7, 0.7, 0.7]
+              		},
+              		"thirdperson_lefthand": {
+              			"translation": [3.5, 4, -1.5],
+              			"scale": [0.7, 0.7, 0.7]
+              		},
+              		"firstperson_righthand": {
+              			"translation": [3.5, 4, -1.5],
+              			"scale": [0.7, 0.7, 0.7]
+              		},
+              		"firstperson_lefthand": {
+              			"translation": [3.5, 4, -1.5],
+              			"scale": [0.7, 0.7, 0.7]
+              		},
+              		"ground": {
+              			"translation": [0, 1.5, 0],
+              			"scale": [0.4, 0.4, 0.4]
+              		},
+              		"gui": {
+              			"rotation": [20, -45, 0],
+              			"translation": [0, 0.25, 0],
+              			"scale": [0.6, 0.6, 0.6]
+              		},
+              		"fixed": {
+              			"rotation": [0, 90, 0],
+              			"translation": [0, 0, 0.75],
+              			"scale": [0.6, 0.6, 0.6]
+              		}
+              	},
+              	"groups": [
+              		{
+              			"name": "sofa",
+              			"origin": [8, 8, 8],
+              			"color": 0,
+              			"children": [0, 1, 2, 3, 4, 5]
+              		}
+              	]
+            }
+            """;
+
+    public static final String SOFA_NORMAL_CUSHION_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [1, 2, 1],
+            			"to": [15, 7, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 7, 1],
+            			"to": [15, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [5, 7, 5],
+            			"to": [11, 13, 8],
+            			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 11, 7]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1.25, 7, 5],
+            			"to": [4.75, 10.5, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3.25, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+            				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+            				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+            				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+            				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+            				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [11.25, 7, 5],
+            			"to": [14.75, 10.5, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [12.75, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+            				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+            				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+            				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+            				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+            				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 0, 2],
+            			"to": [4, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [3, 8.25, 3.5, 8.75], "texture": "#0"},
+            				"east": {"uv": [4, 8.75, 4.5, 9.25], "texture": "#0"},
+            				"south": {"uv": [4.5, 8.75, 5, 9.25], "texture": "#0"},
+            				"west": {"uv": [5, 8.75, 5.5, 9.25], "texture": "#0"},
+            				"up": {"uv": [9.5, 5.5, 9, 5], "texture": "#0"},
+            				"down": {"uv": [9.5, 5.5, 9, 6], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [12, 0, 2],
+            			"to": [14, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [9, 6, 9.5, 6.5], "texture": "#0"},
+            				"east": {"uv": [9, 6.5, 9.5, 7], "texture": "#0"},
+            				"south": {"uv": [9, 7, 9.5, 7.5], "texture": "#0"},
+            				"west": {"uv": [9, 7.5, 9.5, 8], "texture": "#0"},
+            				"up": {"uv": [9.5, 8.5, 9, 8], "texture": "#0"},
+            				"down": {"uv": [9.5, 8.5, 9, 9], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [12, 0, 12],
+            			"to": [14, 2, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13, 1, 13]},
+            			"faces": {
+            				"north": {"uv": [9, 9, 9.5, 9.5], "texture": "#0"},
+            				"east": {"uv": [1, 9.25, 1.5, 9.75], "texture": "#0"},
+            				"south": {"uv": [1.5, 9.25, 2, 9.75], "texture": "#0"},
+            				"west": {"uv": [2, 9.25, 2.5, 9.75], "texture": "#0"},
+            				"up": {"uv": [9.75, 2.5, 9.25, 2], "texture": "#0"},
+            				"down": {"uv": [3, 9.25, 2.5, 9.75], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 0, 12],
+            			"to": [4, 2, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3, 1, 13]},
+            			"faces": {
+            				"north": {"uv": [9.25, 2.5, 9.75, 3], "texture": "#0"},
+            				"east": {"uv": [9.25, 3, 9.75, 3.5], "texture": "#0"},
+            				"south": {"uv": [9.25, 3.5, 9.75, 4], "texture": "#0"},
+            				"west": {"uv": [4, 9.25, 4.5, 9.75], "texture": "#0"},
+            				"up": {"uv": [5, 9.75, 4.5, 9.25], "texture": "#0"},
+            				"down": {"uv": [5.5, 9.25, 5, 9.75], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_CENTER_CUSHION_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [0, 2, 1],
+            			"to": [16, 7, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0, 7, 1],
+            			"to": [16, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [5, 7, 5],
+            			"to": [11, 13, 8],
+            			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 11, 7]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_LEFT_CUSHION_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [0, 2, 1],
+            			"to": [16, 7, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0, 7, 1],
+            			"to": [16, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [7, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [6, 7, 5],
+            			"to": [12, 13, 8],
+            			"rotation": {"angle": -22.5, "axis": "x", "origin": [7, 11, 7]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0.25, 7, 5],
+            			"to": [3.75, 10.5, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2.25, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+            				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+            				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+            				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+            				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+            				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 0, 2],
+            			"to": [3, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [3, 8.25, 3.5, 8.75], "texture": "#0"},
+            				"east": {"uv": [4, 8.75, 4.5, 9.25], "texture": "#0"},
+            				"south": {"uv": [4.5, 8.75, 5, 9.25], "texture": "#0"},
+            				"west": {"uv": [5, 8.75, 5.5, 9.25], "texture": "#0"},
+            				"up": {"uv": [9.5, 5.5, 9, 5], "texture": "#0"},
+            				"down": {"uv": [9.5, 5.5, 9, 6], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 0, 12],
+            			"to": [3, 2, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2, 1, 13]},
+            			"faces": {
+            				"north": {"uv": [9.25, 2.5, 9.75, 3], "texture": "#0"},
+            				"east": {"uv": [9.25, 3, 9.75, 3.5], "texture": "#0"},
+            				"south": {"uv": [9.25, 3.5, 9.75, 4], "texture": "#0"},
+            				"west": {"uv": [4, 9.25, 4.5, 9.75], "texture": "#0"},
+            				"up": {"uv": [5, 9.75, 4.5, 9.25], "texture": "#0"},
+            				"down": {"uv": [5.5, 9.25, 5, 9.75], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_RIGHT_CUSHION_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [0, 2, 1],
+            			"to": [16, 7, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [1, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0, 7, 1],
+            			"to": [16, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [9, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [4, 7, 5],
+            			"to": [10, 13, 8],
+            			"rotation": {"angle": -22.5, "axis": "x", "origin": [10, 11, 7]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [12.25, 7, 5],
+            			"to": [15.75, 10.5, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13.75, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+            				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+            				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+            				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+            				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+            				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [13, 0, 2],
+            			"to": [15, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [14, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [9, 6, 9.5, 6.5], "texture": "#0"},
+            				"east": {"uv": [9, 6.5, 9.5, 7], "texture": "#0"},
+            				"south": {"uv": [9, 7, 9.5, 7.5], "texture": "#0"},
+            				"west": {"uv": [9, 7.5, 9.5, 8], "texture": "#0"},
+            				"up": {"uv": [9.5, 8.5, 9, 8], "texture": "#0"},
+            				"down": {"uv": [9.5, 8.5, 9, 9], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [13, 0, 12],
+            			"to": [15, 2, 14],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [14, 1, 13]},
+            			"faces": {
+            				"north": {"uv": [9, 9, 9.5, 9.5], "texture": "#0"},
+            				"east": {"uv": [1, 9.25, 1.5, 9.75], "texture": "#0"},
+            				"south": {"uv": [1.5, 9.25, 2, 9.75], "texture": "#0"},
+            				"west": {"uv": [2, 9.25, 2.5, 9.75], "texture": "#0"},
+            				"up": {"uv": [9.75, 2.5, 9.25, 2], "texture": "#0"},
+            				"down": {"uv": [3, 9.25, 2.5, 9.75], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_LEFTCORNER_CUSHION_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [1, 2, 1],
+            			"to": [15, 7, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 2.0025, 1.001],
+            			"to": [16, 6.9975, 15.002],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [1, 4, 0.1]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 7, 1],
+            			"to": [16, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [3, 7, 6],
+            			"to": [11, 15.001, 10],
+            			"rotation": {"angle": 45, "axis": "y", "origin": [5, 11, 8]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 11, 5],
+            			"to": [5, 15, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2.95, 13.5, 9.5]},
+            			"faces": {
+            				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+            				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+            				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+            				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+            				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+            				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [1, 7, 5],
+            			"to": [5, 11, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [2.25, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+            				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+            				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+            				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+            				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+            				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [2, 0, 2],
+            			"to": [4, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [3, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [3, 8.25, 3.5, 8.75], "texture": "#0"},
+            				"east": {"uv": [4, 8.75, 4.5, 9.25], "texture": "#0"},
+            				"south": {"uv": [4.5, 8.75, 5, 9.25], "texture": "#0"},
+            				"west": {"uv": [5, 8.75, 5.5, 9.25], "texture": "#0"},
+            				"up": {"uv": [9.5, 5.5, 9, 5], "texture": "#0"},
+            				"down": {"uv": [9.5, 5.5, 9, 6], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5, 6]
+            		}
+            	]
+            }
+            """;
+
+    public static final String SOFA_RIGHTCORNER_CUSHION_MODEL = """
+            {
+            	"credit": "Made with Blockbench",
+            	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "aestheticseating:block/sofa_COLOR_NAME_VALUE",
+            		"particle": "aestheticseating:block/sofa_COLOR_NAME_VALUE"
+            	},
+            	"elements": [
+            		{
+            			"from": [1, 2, 1.001],
+            			"to": [15, 7, 16.001],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [0, 4, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0, 2.0025, 1],
+            			"to": [14, 6.9975, 15],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 4.1, 0]},
+            			"faces": {
+            				"north": {"uv": [3.5, 4, 7, 5.25], "texture": "#0"},
+            				"east": {"uv": [3.5, 5.25, 7, 6.5], "texture": "#0"},
+            				"south": {"uv": [3.5, 6.5, 7, 7.75], "texture": "#0"},
+            				"west": {"uv": [0, 7, 3.5, 8.25], "texture": "#0"},
+            				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+            				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [0, 7, 1],
+            			"to": [15, 15, 5],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 11, 3]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [5.25, 7, 5.25],
+            			"to": [13.25, 15.001, 9.25],
+            			"rotation": {"angle": -45, "axis": "y", "origin": [10.25, 11, 7.25]},
+            			"faces": {
+            				"north": {"uv": [3.5, 0, 7, 2], "texture": "#0"},
+            				"east": {"uv": [8, 7.25, 9, 9.25], "texture": "#0"},
+            				"south": {"uv": [3.5, 2, 7, 4], "texture": "#0"},
+            				"west": {"uv": [0, 8.25, 1, 10.25], "texture": "#0"},
+            				"up": {"uv": [10.5, 1, 7, 0], "texture": "#0"},
+            				"down": {"uv": [10.5, 1, 7, 2], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [11, 11, 5],
+            			"to": [15, 15, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13.45, 13.5, 9.5]},
+            			"faces": {
+            				"north": {"uv": [1, 8.25, 2, 9.25], "texture": "#0"},
+            				"east": {"uv": [7, 2, 9.25, 3], "texture": "#0"},
+            				"south": {"uv": [2, 8.25, 3, 9.25], "texture": "#0"},
+            				"west": {"uv": [7, 3, 9.25, 4], "texture": "#0"},
+            				"up": {"uv": [8, 6.25, 7, 4], "texture": "#0"},
+            				"down": {"uv": [8, 6.25, 7, 8.5], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [11, 7, 5],
+            			"to": [15, 11, 16],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [12.75, 9, 9.5]},
+            			"faces": {
+            				"north": {"uv": [6.75, 8.5, 7.75, 9.5], "texture": "#0"},
+            				"east": {"uv": [3.5, 7.75, 5.75, 8.75], "texture": "#0"},
+            				"south": {"uv": [3, 8.75, 4, 9.75], "texture": "#0"},
+            				"west": {"uv": [8, 4, 10.25, 5], "texture": "#0"},
+            				"up": {"uv": [6.75, 10, 5.75, 7.75], "texture": "#0"},
+            				"down": {"uv": [9, 5, 8, 7.25], "texture": "#0"}
+            			}
+            		},
+            		{
+            			"from": [12, 0, 2],
+            			"to": [14, 2, 4],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [13, 1, 3]},
+            			"faces": {
+            				"north": {"uv": [9, 6, 9.5, 6.5], "texture": "#0"},
+            				"east": {"uv": [9, 6.5, 9.5, 7], "texture": "#0"},
+            				"south": {"uv": [9, 7, 9.5, 7.5], "texture": "#0"},
+            				"west": {"uv": [9, 7.5, 9.5, 8], "texture": "#0"},
+            				"up": {"uv": [9.5, 8.5, 9, 8], "texture": "#0"},
+            				"down": {"uv": [9.5, 8.5, 9, 9], "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [3.5, 4, -1.5],
+            			"scale": [0.7, 0.7, 0.7]
+            		},
+            		"ground": {
+            			"translation": [0, 1.5, 0],
+            			"scale": [0.4, 0.4, 0.4]
+            		},
+            		"gui": {
+            			"rotation": [20, -45, 0],
+            			"translation": [0, 0.25, 0],
+            			"scale": [0.6, 0.6, 0.6]
+            		},
+            		"fixed": {
+            			"rotation": [0, 90, 0],
+            			"translation": [0, 0, 0.75],
+            			"scale": [0.6, 0.6, 0.6]
+            		}
+            	},
+            	"groups": [
+            		{
+            			"name": "sofa",
+            			"origin": [8, 8, 8],
+            			"color": 0,
+            			"children": [0, 1, 2, 3, 4, 5, 6]
+            		}
+            	]
             }
             """;
 }

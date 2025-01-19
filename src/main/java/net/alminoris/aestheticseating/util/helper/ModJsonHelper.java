@@ -183,6 +183,31 @@ public class ModJsonHelper
         }
     }
 
+    public static void createSofaModel(String jsonContent, String colorName, String variant, Boolean isCushion)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ AestheticSeating.MOD_ID+"/models/block/";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "sofa_" + colorName + ((variant.equals("normal")) ? "" : "_" + variant) + (isCushion ? "_cushion" : "") + ".json";
+        File modelFile = new File(directory, fileName);
+
+        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     public static void createSetteeBlockState(String colorName)
     {
         String projectPath = System.getProperty("user.dir");
@@ -197,6 +222,31 @@ public class ModJsonHelper
         File modelFile = new File(directory, fileName);
 
         String jsonContent = ModJsonTemplates.SETTEE_BLOCKSTATE_TEMPLATE.replace("COLOR_NAME_VALUE", colorName);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createSofaBlockState(String colorName)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ AestheticSeating.MOD_ID+"/blockstates";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "sofa_" + colorName + ".json";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.SOFA_BLOCKSTATE_TEMPLATE.replace("COLOR_NAME_VALUE", colorName);
 
         try (FileWriter writer = new FileWriter(modelFile))
         {

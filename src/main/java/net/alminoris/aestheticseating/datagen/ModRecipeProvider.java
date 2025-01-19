@@ -7,6 +7,7 @@ import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
@@ -67,6 +68,9 @@ public class ModRecipeProvider extends FabricRecipeProvider
         for(String name : BlockSetsHelper.COLORS)
         {
             registerSettee(recipeExporter, ModBlocks.SETTEES.get(name),
+                    Registries.BLOCK.get(Identifier.of("minecraft", name+"_wool")));
+
+            registerSofa(recipeExporter, ModBlocks.SOFAS.get(name),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_wool")));
         }
 
@@ -158,6 +162,18 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .pattern("###")
                 .input('#', wool)
                 .criterion(hasItem(wool), conditionsFromItem(wool))
+                .offerTo(recipeExporter);
+    }
+
+    private static void registerSofa(RecipeExporter recipeExporter, Block block, Block wool)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
+                .pattern("##")
+                .pattern("//")
+                .input('#', wool)
+                .input('/', Blocks.GRAY_CONCRETE)
+                .criterion(hasItem(wool), conditionsFromItem(wool))
+                .criterion(hasItem(Blocks.GRAY_CONCRETE), conditionsFromItem(Blocks.GRAY_CONCRETE))
                 .offerTo(recipeExporter);
     }
 }

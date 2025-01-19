@@ -55,6 +55,14 @@ public class ModBlocks
         }
     }};
 
+    public static final Dictionary<String, Block> SOFAS = new Hashtable<>()
+    {{
+        for(String name : BlockSetsHelper.COLORS)
+        {
+            put(name, registerBlock("sofa_"+name, new Sofa(name)));
+        }
+    }};
+
     public static final Dictionary<String, Block> CUSHIONS = new Hashtable<>()
     {{
         for(String name : BlockSetsHelper.COLORS)
