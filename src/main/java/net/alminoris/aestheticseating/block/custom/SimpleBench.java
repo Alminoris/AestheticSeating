@@ -2,12 +2,11 @@ package net.alminoris.aestheticseating.block.custom;
 
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -18,6 +17,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -63,7 +63,7 @@ public class SimpleBench extends SeatingFurniture
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx)
     {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing());
+        return this.getDefaultState().with(FACING, ctx.getPlayer().getHorizontalFacing());
     }
 
     @Override
@@ -95,7 +95,7 @@ public class SimpleBench extends SeatingFurniture
         boolean currentBackrest = state.get(BACKREST);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (stack.isIn(ItemTags.AXES))
+        if (stack.isIn(ConventionalItemTags.AXES))
         {
             if (!world.isClient)
             {
@@ -123,9 +123,9 @@ public class SimpleBench extends SeatingFurniture
             if (!world.isClient)
             {
                 Block block = Block.getBlockFromItem(player.getOffHandStack().getItem());
-                if (!checkForWrenching(Registries.BLOCK.getId(block).getPath()).isEmpty())
+                if (!checkForWrenching(Registry.BLOCK.getId(block).getPath()).isEmpty())
                 {
-                    String name = checkForWrenching(Registries.BLOCK.getId(block).getPath());
+                    String name = checkForWrenching(Registry.BLOCK.getId(block).getPath());
 
                     if (this.name.equals(name))
                     {

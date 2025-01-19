@@ -6,7 +6,7 @@ import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.alminoris.aestheticseating.util.helper.ModJsonHelper;
 import net.alminoris.aestheticseating.util.helper.ModJsonTemplates;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -15,9 +15,9 @@ import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider
 {
-    public ModModelProvider(FabricDataOutput output)
+    public ModModelProvider(FabricDataGenerator dataGenerator)
     {
-        super(output);
+        super(dataGenerator);
     }
 
     @Override

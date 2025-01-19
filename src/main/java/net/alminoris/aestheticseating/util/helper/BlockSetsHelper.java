@@ -12,7 +12,7 @@ public class BlockSetsHelper
 
     public static final String[] STONES =
             {
-                    "tuff", "blackstone", "andesite", "diorite", "granite",  "deepslate", "basalt", "quartz", "blackstonebricks"
+                    "blackstone", "andesite", "diorite", "granite",  "deepslate", "basalt", "quartz", "blackstonebricks"
             };
 
     public static final String[] WOODS =

@@ -7,18 +7,18 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.ItemTags;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -84,7 +84,7 @@ public class SimpleChair extends SeatingFurniture
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx)
     {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing());
+        return this.getDefaultState().with(FACING, ctx.getPlayer().getHorizontalFacing());
     }
 
     @Override
@@ -105,7 +105,7 @@ public class SimpleChair extends SeatingFurniture
             if (!world.isClient)
             {
                 Direction currentFacing = state.get(FACING);
-                String colorName = Registries.ITEM.getId(stack.getItem()).getPath().split("_")[0];
+                String colorName = Registry.ITEM.getId(stack.getItem()).getPath().split("_")[0];
                 world.setBlockState(pos, state
                         .with(FACING, currentFacing)
                         .with(RECLINED, currentReclined)
@@ -157,7 +157,7 @@ public class SimpleChair extends SeatingFurniture
                 else
                     stack.decrement(1);
 
-                Item item = Registries.ITEM.get(Identifier.of("minecraft", colorName + "_carpet"));
+                Item item = Registry.ITEM.get(Identifier.of("minecraft", colorName + "_carpet"));
                 ItemStack carpetStack = new ItemStack(item);
                 if (!player.getInventory().insertStack(carpetStack))
                     player.dropItem(carpetStack, false);

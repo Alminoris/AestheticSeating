@@ -3,6 +3,8 @@ import net.alminoris.aestheticseating.util.SeatEntityPool;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.Packet;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -53,6 +55,12 @@ public class SeatEntity extends Entity
 
     @Override
     protected void writeCustomDataToNbt(NbtCompound nbt) {}
+
+    @Override
+    public Packet<?> createSpawnPacket()
+    {
+        return new EntitySpawnS2CPacket(this);
+    }
 
     @Override
     public boolean doesNotCollide(double offsetX, double offsetY, double offsetZ)

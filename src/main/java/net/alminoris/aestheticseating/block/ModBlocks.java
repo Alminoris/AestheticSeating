@@ -2,13 +2,15 @@ package net.alminoris.aestheticseating.block;
 
 import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.custom.*;
+import net.alminoris.aestheticseating.item.ModItemGroups;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -73,14 +75,14 @@ public class ModBlocks
 
     public static Block registerBlock(String name, Block block)
     {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(AestheticSeating.MOD_ID, name), block);
+        registerBlockItem(name, block, ModItemGroups.ASEAT_TAB);
+        return Registry.register(Registry.BLOCK, Identifier.of(AestheticSeating.MOD_ID, name), block);
     }
 
-    private static void registerBlockItem(String name, Block block)
+    private static void registerBlockItem(String name, Block block, ItemGroup tab)
     {
-        Registry.register(Registries.ITEM, Identifier.of(AestheticSeating.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+        Registry.register(Registry.ITEM, Identifier.of(AestheticSeating.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings().group(tab)));
     }
 
     public static void registerBlocks()

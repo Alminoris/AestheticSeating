@@ -2,23 +2,24 @@ package net.alminoris.aestheticseating.block.custom;
 
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.ItemTags;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -111,7 +112,7 @@ public class SimpleStool extends SeatingFurniture
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx)
     {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing());
+        return this.getDefaultState().with(FACING, ctx.getPlayer().getHorizontalFacing());
     }
 
     @Override
@@ -127,12 +128,12 @@ public class SimpleStool extends SeatingFurniture
         boolean currentCarpeted = state.get(CARPETED);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (stack.isIn(ItemTags.WOOL_CARPETS) && !currentCarpeted)
+        if (stack.isIn(net.minecraft.tag.ItemTags.WOOL_CARPETS) && !currentCarpeted)
         {
             if (!world.isClient)
             {
                 Direction currentFacing = state.get(FACING);
-                String colorName = Registries.ITEM.getId(stack.getItem()).getPath().split("_")[0];
+                String colorName = Registry.ITEM.getId(stack.getItem()).getPath().split("_")[0];
                 world.setBlockState(pos, state
                         .with(FACING, currentFacing)
                         .with(FORM, currentForm)
@@ -145,7 +146,7 @@ public class SimpleStool extends SeatingFurniture
             return ActionResult.SUCCESS;
         }
 
-        if (stack.isIn(ItemTags.AXES))
+        if (stack.isIn(ConventionalItemTags.AXES))
         {
             if (!world.isClient)
             {
@@ -175,9 +176,9 @@ public class SimpleStool extends SeatingFurniture
             if (!world.isClient)
             {
                 Block block = Block.getBlockFromItem(player.getOffHandStack().getItem());
-                if (!checkForWrenching(Registries.BLOCK.getId(block).getPath()).isEmpty())
+                if (!checkForWrenching(Registry.BLOCK.getId(block).getPath()).isEmpty())
                 {
-                    String[] name = checkForWrenching(Registries.BLOCK.getId(block).getPath()).split("/");
+                    String[] name = checkForWrenching(Registry.BLOCK.getId(block).getPath()).split("/");
 
                     if (this.name.equals(name[0]))
                     {
@@ -220,7 +221,7 @@ public class SimpleStool extends SeatingFurniture
                 else
                     stack.decrement(1);
 
-                Item item = Registries.ITEM.get(Identifier.of("minecraft", colorName + "_carpet"));
+                Item item = Registry.ITEM.get(Identifier.of("minecraft", colorName + "_carpet"));
                 ItemStack carpetStack = new ItemStack(item);
                 if (!player.getInventory().insertStack(carpetStack))
                     player.dropItem(carpetStack, false);
