@@ -12,7 +12,7 @@ import net.minecraft.util.registry.Registry;
 public class ModEntities
 {
     public static final EntityType<SeatEntity> SEAT = Registry.register(
-            Registry.ENTITY_TYPE, Identifier.of(AestheticSeating.MOD_ID, "seat"),
+            Registry.ENTITY_TYPE, new Identifier(AestheticSeating.MOD_ID, "seat"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, SeatEntity::new)
                     .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 

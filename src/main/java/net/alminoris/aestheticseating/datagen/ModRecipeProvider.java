@@ -52,30 +52,30 @@ public class ModRecipeProvider extends FabricRecipeProvider
             String blockName = (name.equals("crimson") || name.equals("warped")) ? "stem" : (name.equals("bamboo") ? "block" : "log");
 
             registerSimpleChair(recipeExporter, ModBlocks.SIMPLE_CHAIRS.get(name),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_slab")),
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_"+blockName)));
 
             registerSimpleStool(recipeExporter, ModBlocks.SIMPLE_STOOLS.get(name),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_slab")),
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_"+blockName)));
 
             registerSimpleBench(recipeExporter, ModBlocks.SIMPLE_BENCHES.get(name),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_slab")),
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_"+blockName)));
         }
 
         for(String name : BlockSetsHelper.COLORS)
         {
             registerSettee(recipeExporter, ModBlocks.SETTEES.get(name),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_wool")));
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_wool")));
 
             registerSofa(recipeExporter, ModBlocks.SOFAS.get(name),
-                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_wool")));
+                    Registry.BLOCK.get(new Identifier("minecraft", name+"_wool")));
         }
 
         for(String name : BlockSetsHelper.COLORS)
         {
-            offerSingleOutputShapelessRecipe(recipeExporter, ModBlocks.CUSHIONS.get(name), Registry.BLOCK.get(Identifier.of("minecraft", name+"_wool")), "cushion");
+            offerSingleOutputShapelessRecipe(recipeExporter, ModBlocks.CUSHIONS.get(name), Registry.BLOCK.get(new Identifier("minecraft", name+"_wool")), "cushion");
         }
 
         for(String name : BlockSetsHelper.STONES)
@@ -83,25 +83,25 @@ public class ModRecipeProvider extends FabricRecipeProvider
             if (!name.equals("blackstonebricks") && !name.equals("quartz") && !name.equals("basalt"))
             {
                 registerStoneBench(recipeExporter,
-                        Registry.BLOCK.get(Identifier.of("minecraft", "polished_"+name)),
-                        Registry.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                        Registry.BLOCK.get(new Identifier("minecraft", "polished_"+name)),
+                        Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
                         ModBlocks.STONE_BENCHES.get(name));
             }
         }
 
         registerStoneBench(recipeExporter,
-                Registry.BLOCK.get(Identifier.of("minecraft", "polished_blackstone_bricks")),
-                Registry.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                Registry.BLOCK.get(new Identifier("minecraft", "polished_blackstone_bricks")),
+                Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
                 ModBlocks.STONE_BENCHES.get("blackstonebricks"));
 
         registerStoneBench(recipeExporter,
-                Registry.BLOCK.get(Identifier.of("minecraft", "smooth_basalt")),
-                Registry.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                Registry.BLOCK.get(new Identifier("minecraft", "smooth_basalt")),
+                Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
                 ModBlocks.STONE_BENCHES.get("basalt"));
 
         registerStoneBench(recipeExporter,
-                Registry.BLOCK.get(Identifier.of("minecraft", "quartz_block")),
-                Registry.BLOCK.get(Identifier.of("minecraft", "smooth_stone")),
+                Registry.BLOCK.get(new Identifier("minecraft", "quartz_block")),
+                Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
                 ModBlocks.STONE_BENCHES.get("quartz"));
     }
 

@@ -128,7 +128,7 @@ public class SimpleStool extends SeatingFurniture
         boolean currentCarpeted = state.get(CARPETED);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (stack.isIn(net.minecraft.tag.ItemTags.WOOL_CARPETS) && !currentCarpeted)
+        if (stack.isIn(net.minecraft.tag.ItemTags.WOOL) && !currentCarpeted)
         {
             if (!world.isClient)
             {
@@ -221,7 +221,7 @@ public class SimpleStool extends SeatingFurniture
                 else
                     stack.decrement(1);
 
-                Item item = Registry.ITEM.get(Identifier.of("minecraft", colorName + "_carpet"));
+                Item item = Registry.ITEM.get(new Identifier("minecraft", colorName + "_carpet"));
                 ItemStack carpetStack = new ItemStack(item);
                 if (!player.getInventory().insertStack(carpetStack))
                     player.dropItem(carpetStack, false);

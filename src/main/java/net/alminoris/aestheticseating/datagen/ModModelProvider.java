@@ -34,26 +34,26 @@ public class ModModelProvider extends FabricModelProvider
             ModJsonHelper.createSimpleChairBlockState(woodName);
             ModJsonHelper.createSimpleBenchBlockState(woodName);
             ModJsonHelper.createSimpleStoolBlockState(woodName);
-            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
-            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
-            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), new Identifier(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), new Identifier(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), new Identifier(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
         }
 
         for(String name : BlockSetsHelper.STONES)
         {
             registerStoneBench(name);
             ModJsonHelper.createStoneBenchBlockState(name);
-            blockStateModelGenerator.registerParentedItemModel(ModBlocks.STONE_BENCHES.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/stone_bench_"+name));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.STONE_BENCHES.get(name), new Identifier(AestheticSeating.MOD_ID, "block/stone_bench_"+name));
         }
 
         for(String name : BlockSetsHelper.COLORS)
         {
             registerSofa(name);
             ModJsonHelper.createSofaBlockState(name);
-            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SOFAS.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/sofa_"+name));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SOFAS.get(name), new Identifier(AestheticSeating.MOD_ID, "block/sofa_"+name));
 
             registerSettee(name);
-            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SETTEES.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/settee_"+name+"_0"));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SETTEES.get(name), new Identifier(AestheticSeating.MOD_ID, "block/settee_"+name+"_0"));
 
             ModJsonHelper.createCushionModel(name);
             blockStateModelGenerator.registerSimpleState(ModBlocks.CUSHIONS.get(name));

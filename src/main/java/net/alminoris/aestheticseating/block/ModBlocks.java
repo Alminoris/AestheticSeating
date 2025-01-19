@@ -76,12 +76,12 @@ public class ModBlocks
     public static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block, ModItemGroups.ASEAT_TAB);
-        return Registry.register(Registry.BLOCK, Identifier.of(AestheticSeating.MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, new Identifier(AestheticSeating.MOD_ID, name), block);
     }
 
     private static void registerBlockItem(String name, Block block, ItemGroup tab)
     {
-        Registry.register(Registry.ITEM, Identifier.of(AestheticSeating.MOD_ID, name),
+        Registry.register(Registry.ITEM, new Identifier(AestheticSeating.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(tab)));
     }
 
