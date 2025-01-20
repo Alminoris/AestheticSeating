@@ -10,7 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 
-public abstract class SeatingFurniture extends Block
+public abstract class SeatingFurniture extends Block implements Waterloggable
 {
     private final double seatY;
 

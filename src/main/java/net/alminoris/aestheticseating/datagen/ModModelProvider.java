@@ -48,6 +48,10 @@ public class ModModelProvider extends FabricModelProvider
 
         for(String name : BlockSetsHelper.COLORS)
         {
+            registerSofa(name);
+            ModJsonHelper.createSofaBlockState(name);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SOFAS.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/sofa_"+name));
+
             registerSettee(name);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SETTEES.get(name), Identifier.of(AestheticSeating.MOD_ID, "block/settee_"+name+"_0"));
 
@@ -90,6 +94,23 @@ public class ModModelProvider extends FabricModelProvider
         ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_CENTER_MODEL, stoneVariant, "center");
         ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_LEFT_MODEL, stoneVariant, "left");
         ModJsonHelper.createStoneBenchModel(ModJsonTemplates.STONE_BENCH_RIGHT_MODEL, stoneVariant, "right");
+    }
+
+    private void registerSofa(String colorVariant)
+    {
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_NORMAL_MODEL, colorVariant, "normal", false);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_CENTER_MODEL, colorVariant, "center", false);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_LEFT_MODEL, colorVariant, "left", false);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_RIGHT_MODEL, colorVariant, "right", false);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_LEFTCORNER_MODEL, colorVariant, "leftcorner", false);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_RIGHTCORNER_MODEL, colorVariant, "rightcorner", false);
+
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_NORMAL_CUSHION_MODEL, colorVariant, "normal", true);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_CENTER_CUSHION_MODEL, colorVariant, "center", true);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_LEFT_CUSHION_MODEL, colorVariant, "left", true);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_RIGHT_CUSHION_MODEL, colorVariant, "right", true);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_LEFTCORNER_CUSHION_MODEL, colorVariant, "leftcorner", true);
+        ModJsonHelper.createSofaModel(ModJsonTemplates.SOFA_RIGHTCORNER_CUSHION_MODEL, colorVariant, "rightcorner", true);
     }
 
     private void registerSimpleStool(String woodVariant, String colorVariant)
