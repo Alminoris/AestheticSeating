@@ -20,46 +20,18 @@ public class ModBlocks
 {
     public static final Dictionary<String, Block> SIMPLE_CHAIRS = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
-        }
-        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
-        {
-            for(String name : ModItemGroups.EXTRA_WOODS_AN)
-            {
-                put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
-            }
-        }
-        if (FabricLoader.getInstance().isModLoaded("wildfields"))
-        {
-            for(String name : ModItemGroups.EXTRA_WOODS_WF)
-            {
-                put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
-            }
         }
 
     }};
 
     public static final Dictionary<String, Block> SIMPLE_BENCHES = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             put(name, registerBlock("simple_bench_"+name, new SimpleBench(name)));
-        }
-        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
-        {
-            for(String name : ModItemGroups.EXTRA_WOODS_AN)
-            {
-                put(name, registerBlock("simple_chair_"+name, new SimpleBench(name)));
-            }
-        }
-        if (FabricLoader.getInstance().isModLoaded("wildfields"))
-        {
-            for(String name : ModItemGroups.EXTRA_WOODS_WF)
-            {
-                put(name, registerBlock("simple_chair_"+name, new SimpleBench(name)));
-            }
         }
     }};
 
@@ -73,23 +45,9 @@ public class ModBlocks
 
     public static final Dictionary<String, Block> SIMPLE_STOOLS = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             put(name, registerBlock("simple_stool_"+name, new SimpleStool(name)));
-        }
-        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
-        {
-            for(String name : ModItemGroups.EXTRA_WOODS_AN)
-            {
-                put(name, registerBlock("simple_chair_"+name, new SimpleStool(name)));
-            }
-        }
-        if (FabricLoader.getInstance().isModLoaded("wildfields"))
-        {
-            for(String name : ModItemGroups.EXTRA_WOODS_WF)
-            {
-                put(name, registerBlock("simple_chair_"+name, new SimpleStool(name)));
-            }
         }
     }};
 

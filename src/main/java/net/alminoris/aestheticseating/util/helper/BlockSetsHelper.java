@@ -1,5 +1,7 @@
 package net.alminoris.aestheticseating.util.helper;
 
+import net.alminoris.aestheticseating.item.ModItemGroups;
+
 public class BlockSetsHelper
 {
     public static final String[] COLORS =
@@ -29,9 +31,10 @@ public class BlockSetsHelper
 
     public static String[] getWoods()
     {
-        String[] combinedWoods = new String[WOODS.length + EXTRA_WOODS.length];
+        String[] combinedWoods = new String[WOODS.length + ModItemGroups.EXTRA_WOODS_AN.size() + ModItemGroups.EXTRA_WOODS_WF.size()];
         System.arraycopy(WOODS, 0, combinedWoods, 0, WOODS.length);
-        System.arraycopy(EXTRA_WOODS, 0, combinedWoods, WOODS.length, EXTRA_WOODS.length);
+        System.arraycopy(ModItemGroups.EXTRA_WOODS_AN.toArray(new String[ModItemGroups.EXTRA_WOODS_AN.size()]), 0, combinedWoods, WOODS.length, ModItemGroups.EXTRA_WOODS_AN.size());
+        System.arraycopy(ModItemGroups.EXTRA_WOODS_WF.toArray(new String[ModItemGroups.EXTRA_WOODS_WF.size()]), 0, combinedWoods, WOODS.length+ModItemGroups.EXTRA_WOODS_AN.size(), ModItemGroups.EXTRA_WOODS_WF.size());
         return combinedWoods;
     }
 }

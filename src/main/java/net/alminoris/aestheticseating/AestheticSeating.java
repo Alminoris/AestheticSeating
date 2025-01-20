@@ -19,6 +19,7 @@ public class AestheticSeating implements ModInitializer
 	{
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
+		ModItemGroups.registerModItemGroups();
 		ModEntities.registerEntities();
 	}
 }
