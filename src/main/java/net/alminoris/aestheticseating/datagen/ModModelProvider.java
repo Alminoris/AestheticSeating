@@ -23,7 +23,7 @@ public class ModModelProvider extends FabricModelProvider
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator)
     {
-        for(String woodName : BlockSetsHelper.getWoods())
+        for(String woodName : BlockSetsHelper.WOODS)
         {
             for(String name : BlockSetsHelper.COLORS)
             {

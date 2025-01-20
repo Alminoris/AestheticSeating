@@ -5,6 +5,7 @@ import net.alminoris.aestheticseating.block.custom.*;
 import net.alminoris.aestheticseating.item.ModItemGroups;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -19,17 +20,46 @@ public class ModBlocks
 {
     public static final Dictionary<String, Block> SIMPLE_CHAIRS = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.getWoods())
+        for(String name : BlockSetsHelper.WOODS)
         {
             put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
         }
+        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+        {
+            for(String name : ModItemGroups.EXTRA_WOODS_AN)
+            {
+                put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
+            }
+        }
+        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+        {
+            for(String name : ModItemGroups.EXTRA_WOODS_WF)
+            {
+                put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
+            }
+        }
+
     }};
 
     public static final Dictionary<String, Block> SIMPLE_BENCHES = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.getWoods())
+        for(String name : BlockSetsHelper.WOODS)
         {
             put(name, registerBlock("simple_bench_"+name, new SimpleBench(name)));
+        }
+        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+        {
+            for(String name : ModItemGroups.EXTRA_WOODS_AN)
+            {
+                put(name, registerBlock("simple_chair_"+name, new SimpleBench(name)));
+            }
+        }
+        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+        {
+            for(String name : ModItemGroups.EXTRA_WOODS_WF)
+            {
+                put(name, registerBlock("simple_chair_"+name, new SimpleBench(name)));
+            }
         }
     }};
 
@@ -43,9 +73,23 @@ public class ModBlocks
 
     public static final Dictionary<String, Block> SIMPLE_STOOLS = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.getWoods())
+        for(String name : BlockSetsHelper.WOODS)
         {
             put(name, registerBlock("simple_stool_"+name, new SimpleStool(name)));
+        }
+        if (FabricLoader.getInstance().isModLoaded("arborealnature"))
+        {
+            for(String name : ModItemGroups.EXTRA_WOODS_AN)
+            {
+                put(name, registerBlock("simple_chair_"+name, new SimpleStool(name)));
+            }
+        }
+        if (FabricLoader.getInstance().isModLoaded("wildfields"))
+        {
+            for(String name : ModItemGroups.EXTRA_WOODS_WF)
+            {
+                put(name, registerBlock("simple_chair_"+name, new SimpleStool(name)));
+            }
         }
     }};
 
