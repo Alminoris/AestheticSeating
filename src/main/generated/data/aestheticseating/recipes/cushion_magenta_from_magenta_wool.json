@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cushion",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_wool"
+    }
+  ],
+  "result": {
+    "item": "aestheticseating:cushion_magenta"
+  }
+}

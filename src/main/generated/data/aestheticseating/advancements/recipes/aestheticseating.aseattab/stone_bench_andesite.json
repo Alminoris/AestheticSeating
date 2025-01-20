@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "aestheticseating:stone_bench_andesite"
+    ]
+  },
+  "criteria": {
+    "has_polished_andesite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_andesite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_smooth_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "aestheticseating:stone_bench_andesite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_andesite",
+      "has_smooth_stone",
+      "has_the_recipe"
+    ]
+  ]
+}

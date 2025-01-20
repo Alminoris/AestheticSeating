@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "aestheticseating:stone_bench_diorite"
+    ]
+  },
+  "criteria": {
+    "has_polished_diorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_diorite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_smooth_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "aestheticseating:stone_bench_diorite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_diorite",
+      "has_smooth_stone",
+      "has_the_recipe"
+    ]
+  ]
+}

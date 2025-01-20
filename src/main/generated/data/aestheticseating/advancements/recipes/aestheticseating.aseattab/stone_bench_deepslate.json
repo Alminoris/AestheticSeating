@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "aestheticseating:stone_bench_deepslate"
+    ]
+  },
+  "criteria": {
+    "has_polished_deepslate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_deepslate"
+            ]
+          }
+        ]
+      }
+    },
+    "has_smooth_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "aestheticseating:stone_bench_deepslate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_deepslate",
+      "has_smooth_stone",
+      "has_the_recipe"
+    ]
+  ]
+}

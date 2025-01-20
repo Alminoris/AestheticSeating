@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "aestheticseating:stone_bench_blackstonebricks"
+    ]
+  },
+  "criteria": {
+    "has_polished_blackstone_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_blackstone_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_smooth_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:smooth_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "aestheticseating:stone_bench_blackstonebricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_blackstone_bricks",
+      "has_smooth_stone",
+      "has_the_recipe"
+    ]
+  ]
+}
