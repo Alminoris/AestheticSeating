@@ -1,4 +1,5 @@
 package net.alminoris.aestheticseating.entity.custom;
+
 import net.alminoris.aestheticseating.util.SeatEntityPool;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
