@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_granite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:polished_granite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_smooth_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:smooth_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "aestheticseating:stone_bench_granite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_granite",
+      "has_smooth_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "aestheticseating:stone_bench_granite"
+    ]
+  }
+}
