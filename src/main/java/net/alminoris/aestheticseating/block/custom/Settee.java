@@ -7,6 +7,8 @@ import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -62,7 +64,7 @@ public class Settee extends SeatingFurniture
         int currentVariant = state.get(VARIANT);
         Direction currentFacing = state.get(FACING);
 
-        if (stack.getItem() == ModItems.WRENCH)
+        if (stack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("aestheticseating", "wrench"))))
         {
             if (!world.isClient)
             {
