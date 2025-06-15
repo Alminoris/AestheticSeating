@@ -19,10 +19,15 @@ public class ModItemGroups
                     "olive", "tamarisk"
             };
 
+    public static final String[] EXTRA_STONES_WF =
+            {
+                    "dolomite_block", "saltmarsh_block"
+            };
+
     public static final String[] EXTRA_WOODS_AN =
             {
                     "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry",
-                    "bauhinia", "pine", "fir", "cedar"
+                    "bauhinia", "pine", "fir", "cedar", "araucaria", "juniper"
             };
 
     public static final ItemGroup ASEAT_TAB = Registry.register(Registries.ITEM_GROUP,
@@ -76,6 +81,10 @@ public class ModItemGroups
                             for(String name : EXTRA_WOODS_WF)
                             {
                                 entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : BlockSetsHelper.EXTRA_STONES_WF)
+                            {
+                                entries.add(ModBlocks.STONE_BENCHES.get(name));
                             }
                         }
                         for(String name : BlockSetsHelper.COLORS)

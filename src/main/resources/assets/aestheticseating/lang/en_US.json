@@ -139,5 +139,13 @@
   "block.aestheticseating.simple_bench_fir": "Fir Bench",
   "block.aestheticseating.simple_stool_cedar": "Cedar Stool",
   "block.aestheticseating.simple_chair_cedar": "Cedar Chair",
-  "block.aestheticseating.simple_bench_cedar": "Cedar Bench"
+  "block.aestheticseating.simple_bench_cedar": "Cedar Bench",
+  "block.aestheticseating.simple_stool_araucaria": "Araucaria Stool",
+  "block.aestheticseating.simple_chair_araucaria": "Araucaria Chair",
+  "block.aestheticseating.simple_bench_araucaria": "Araucaria Bench",
+  "block.aestheticseating.simple_stool_juniper": "Juniper Stool",
+  "block.aestheticseating.simple_chair_juniper": "Juniper Chair",
+  "block.aestheticseating.simple_bench_juniper": "Juniper Bench",
+  "block.aestheticseating.stone_bench_saltmarsh_block": "Saltmarsh Bench",
+  "block.aestheticseating.stone_bench_dolomite_block": "Dolomite Bench"
 }

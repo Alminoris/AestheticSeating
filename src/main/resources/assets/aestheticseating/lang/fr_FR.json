@@ -139,5 +139,13 @@
   "block.aestheticseating.sofa_purple": "Sofa violet",
   "block.aestheticseating.sofa_red": "Sofa rouge",
   "block.aestheticseating.sofa_white": "Sofa blanc",
-  "block.aestheticseating.sofa_yellow": "Sofa jaune"
+  "block.aestheticseating.sofa_yellow": "Sofa jaune",
+  "block.aestheticseating.simple_stool_araucaria": "Tabouret en araucaria",
+  "block.aestheticseating.simple_chair_araucaria": "Chaise en araucaria",
+  "block.aestheticseating.simple_bench_araucaria": "Banc en araucaria",
+  "block.aestheticseating.simple_stool_juniper": "Tabouret en genévrier",
+  "block.aestheticseating.simple_chair_juniper": "Chaise en genévrier",
+  "block.aestheticseating.simple_bench_juniper": "Banc en genévrier",
+  "block.aestheticseating.stone_bench_saltmarsh_block": "Banc en pierre des marais salants",
+  "block.aestheticseating.stone_bench_dolomite_block": "Banc en dolomie"
 }

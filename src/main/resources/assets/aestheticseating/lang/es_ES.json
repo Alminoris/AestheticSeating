@@ -139,5 +139,13 @@
   "block.aestheticseating.sofa_purple": "Sofá morado",
   "block.aestheticseating.sofa_red": "Sofá rojo",
   "block.aestheticseating.sofa_white": "Sofá blanco",
-  "block.aestheticseating.sofa_yellow": "Sofá amarillo"
+  "block.aestheticseating.sofa_yellow": "Sofá amarillo",
+  "block.aestheticseating.simple_stool_araucaria": "Taburete de araucaria",
+  "block.aestheticseating.simple_chair_araucaria": "Silla de araucaria",
+  "block.aestheticseating.simple_bench_araucaria": "Banco de araucaria",
+  "block.aestheticseating.simple_stool_juniper": "Taburete de enebro",
+  "block.aestheticseating.simple_chair_juniper": "Silla de enebro",
+  "block.aestheticseating.simple_bench_juniper": "Banco de enebro",
+  "block.aestheticseating.stone_bench_saltmarsh_block": "Banco de piedra de marisma salina",
+  "block.aestheticseating.stone_bench_dolomite_block": "Banco de dolomita"
 }

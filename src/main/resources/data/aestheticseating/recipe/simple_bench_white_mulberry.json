@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:white_mulberry_slab"
+      "item": "arborealnature:stripped_white_mulberry_log"
     },
     "/": {
       "item": "arborealnature:white_mulberry_log"
@@ -12,6 +12,7 @@
   "pattern": [
     "##",
     "//"
+    
   ],
   "result": {
     "count": 1,

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:viburnum_slab"
+      "item": "arborealnature:stripped_viburnum_log"
     },
     "/": {
       "item": "arborealnature:viburnum_log"
@@ -12,6 +12,7 @@
   "pattern": [
     "##",
     "//"
+    
   ],
   "result": {
     "count": 1,

@@ -47,7 +47,7 @@ public class StoneBench extends SeatingFurniture
 
     public StoneBench()
     {
-        super(Settings.copy(Blocks.OAK_PLANKS), 0.0D);
+        super(Settings.copy(Blocks.STONE), 0.0D);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(VARIANT, Variant.NORMAL));
     }
 

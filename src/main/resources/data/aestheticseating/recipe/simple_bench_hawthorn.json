@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:hawthorn_slab"
+      "item": "arborealnature:stripped_hawthorn_log"
     },
     "/": {
       "item": "arborealnature:hawthorn_log"
@@ -12,6 +12,7 @@
   "pattern": [
     "##",
     "//"
+    
   ],
   "result": {
     "count": 1,

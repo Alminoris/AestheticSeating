@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:cedar_slab"
+      "item": "arborealnature:stripped_cedar_log"
     },
     "/": {
       "item": "arborealnature:cedar_log"
     }
   },
   "pattern": [
-    "#  ",
     "###",
     "/ /"
+    
   ],
   "result": {
     "count": 1,

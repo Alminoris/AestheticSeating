@@ -1,6 +1,9 @@
 package net.alminoris.aestheticseating.util.helper;
 
 import net.alminoris.aestheticseating.AestheticSeating;
+import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +11,34 @@ import java.io.IOException;
 
 public class ModJsonHelper
 {
-    public static void createSimpleChairModel(String jsonContent, String colorName, String woodName, boolean isReclined, boolean isCarpeted)
+    public static void createShapedRecipe(String outputName, String count, String ingredient1Name, String ingredient2Name, String pattern1, String pattern2, String pattern3)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/data/"+ AestheticSeating.MOD_ID+"/recipe/";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = outputName + ".json";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.SHAPED_RECIPE.replace("COUNT", count)
+                .replace("INGREDIENT1_NAME", ingredient1Name).replace("INGREDIENT2_NAME", ingredient2Name).replace("OUTPUT_NAME", outputName)
+                .replace("PATTERN1", pattern1).replace("PATTERN2", pattern2).replace("PATTERN3", pattern3);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createSimpleChairModel(String jsonContent, String colorName, String woodName, String modId, boolean isReclined, boolean isCarpeted)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -21,7 +51,10 @@ public class ModJsonHelper
         String fileName = "simple_chair_" + woodName + (isReclined ? "_reclined" : "") + (isCarpeted ? "_carpeted" : "") + ".json";
         File modelFile = new File(directory, fileName);
 
-        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName).replace("WOOD_NAME_VALUE", woodName);
+        String logName = (woodName.equals("crimson") || woodName.equals("warped")) ? "stem" : (woodName.equals("bamboo") ? "block" : "log");
+
+        jsonContent = jsonContent.replace("COLOR_NAME", colorName).replace("BASE_NAME", modId+":block/stripped_"+woodName+"_"+logName)
+                .replace("LOG_NAME", modId+":block/"+woodName+"_"+logName);
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
@@ -33,7 +66,7 @@ public class ModJsonHelper
         }
     }
 
-    public static void createSimpleBenchModel(String jsonContent, String woodName, String variant, boolean backrest)
+    public static void createSimpleBenchModel(String jsonContent, String woodName, String modId, String variant, boolean backrest)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -46,7 +79,10 @@ public class ModJsonHelper
         String fileName = "simple_bench_" + woodName + ((variant.equals("normal")) ? "" : "_" + variant) + (backrest ? "_backrest" : "") +  ".json";
         File modelFile = new File(directory, fileName);
 
-        jsonContent = jsonContent.replace("WOOD_NAME_VALUE", woodName);
+        String logName = (woodName.equals("crimson") || woodName.equals("warped")) ? "stem" : (woodName.equals("bamboo") ? "block" : "log");
+
+        jsonContent = jsonContent.replace("BASE_NAME", modId+":block/stripped_"+woodName+"_"+logName)
+                .replace("LOG_NAME", modId+":block/"+woodName+"_"+logName);;
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
@@ -58,7 +94,7 @@ public class ModJsonHelper
         }
     }
 
-    public static void createStoneBenchModel(String jsonContent, String stoneName, String variant)
+    public static void createStoneBenchModel(String jsonContent, String stoneName, String modId, String variant)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -71,7 +107,7 @@ public class ModJsonHelper
         String fileName = "stone_bench_" + stoneName + ((variant.equals("normal")) ? "" : "_" + variant) +  ".json";
         File modelFile = new File(directory, fileName);
 
-        jsonContent = jsonContent.replace("STONE_NAME_VALUE", stoneName);
+        jsonContent = jsonContent.replace("BASE_NAME", modId+":block/"+stoneName);
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
@@ -158,7 +194,7 @@ public class ModJsonHelper
         }
     }
 
-    public static void createSetteeModel(String jsonContent, String colorName, boolean isTransformed, int variant)
+    public static void createSetteeModel(String jsonContent, String colorName, String modId, boolean isTransformed, int variant)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -171,7 +207,7 @@ public class ModJsonHelper
         String fileName = "settee_" + colorName + (isTransformed ? "_transformed" : "") + "_" + variant + ".json";
         File modelFile = new File(directory, fileName);
 
-        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName);
+        jsonContent = jsonContent.replace("COLOR_NAME", modId + ":block/" + colorName+"_wool");
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
@@ -183,7 +219,7 @@ public class ModJsonHelper
         }
     }
 
-    public static void createSofaModel(String jsonContent, String colorName, String variant, Boolean isCushion)
+    public static void createSofaModel(String jsonContent, String colorName, String modId, String variant, Boolean isCushion)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -196,7 +232,7 @@ public class ModJsonHelper
         String fileName = "sofa_" + colorName + ((variant.equals("normal")) ? "" : "_" + variant) + (isCushion ? "_cushion" : "") + ".json";
         File modelFile = new File(directory, fileName);
 
-        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName);
+        jsonContent = jsonContent.replace("COLOR_NAME", modId + ":block/" + colorName+"_wool");
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
@@ -258,7 +294,7 @@ public class ModJsonHelper
         }
     }
 
-    public static void createCushionModel(String colorName)
+    public static void createCushionModel(String colorName, String modId)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -271,7 +307,7 @@ public class ModJsonHelper
         String fileName = "cushion_" + colorName + ".json";
         File modelFile = new File(directory, fileName);
 
-        String jsonContent = ModJsonTemplates.CUSHION_MODEL_TEMPLATE.replace("COLOR_NAME_VALUE", colorName);
+        String jsonContent = ModJsonTemplates.CUSHION_MODEL_TEMPLATE.replace("COLOR_NAME", modId + ":block/" + colorName+"_wool");
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
@@ -283,7 +319,7 @@ public class ModJsonHelper
         }
     }
 
-    public static void createSimpleStoolModel(String jsonContent, String colorName, String woodName, String form, boolean isCarpeted)
+    public static void createSimpleStoolModel(String jsonContent, String colorName, String woodName, String modId, String form, boolean isCarpeted)
     {
         String projectPath = System.getProperty("user.dir");
 
@@ -296,7 +332,10 @@ public class ModJsonHelper
         String fileName = "simple_stool_" + form + "_" + woodName + (isCarpeted ? "_carpeted" : "") + ".json";
         File modelFile = new File(directory, fileName);
 
-        jsonContent = jsonContent.replace("COLOR_NAME_VALUE", colorName).replace("WOOD_NAME_VALUE", woodName);
+        String logName = (woodName.equals("crimson") || woodName.equals("warped")) ? "stem" : (woodName.equals("bamboo") ? "block" : "log");
+
+        jsonContent = jsonContent.replace("COLOR_NAME", colorName).replace("BASE_NAME", modId+":block/stripped_"+woodName+"_"+logName)
+                .replace("LOG_NAME", modId+":block/"+woodName+"_"+logName);
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
