@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:olive_slab"
+      "item": "wildfields:stripped_olive_log"
     },
     "/": {
-      "item": "arborealnature:olive_log"
+      "item": "wildfields:olive_log"
     }
   },
   "pattern": [
-    "#  ",
     "###",
     "/ /"
+    
   ],
   "result": {
     "count": 1,
-    "item": "aestheticseating:simple_chair_olive"
+    "id": "aestheticseating:simple_chair_olive"
   }
 }

@@ -33,7 +33,7 @@ public class ModBlocks
 
     public static final Dictionary<String, Block> STONE_BENCHES = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.STONES)
+        for(String name : BlockSetsHelper.getStones())
         {
             put(name, registerBlock("stone_bench_"+name, new StoneBench()));
         }

@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:wild_cherry_slab"
+      "item": "arborealnature:stripped_wild_cherry_log"
     },
     "/": {
       "item": "arborealnature:wild_cherry_log"
     }
   },
   "pattern": [
-    "#  ",
     "###",
     "/ /"
+    
   ],
   "result": {
     "count": 1,
-    "item": "aestheticseating:simple_chair_wild_cherry"
+    "id": "aestheticseating:simple_chair_wild_cherry"
   }
 }
