@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decorations",
+  "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:mango_slab"
+      "item": "arborealnature:stripped_mango_log"
     },
     "/": {
       "item": "arborealnature:mango_log"
     }
   },
   "pattern": [
-    "#  ",
     "###",
     "/ /"
+    
   ],
   "result": {
     "count": 1,
-    "item": "aestheticseating:simple_chair_mango"
+    "id": "aestheticseating:simple_chair_mango"
   }
 }

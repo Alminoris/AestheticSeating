@@ -139,5 +139,13 @@
   "block.aestheticseating.sofa_purple": "Фіолетовий диван",
   "block.aestheticseating.sofa_red": "Червоний диван",
   "block.aestheticseating.sofa_white": "Білий диван",
-  "block.aestheticseating.sofa_yellow": "Жовтий диван"
+  "block.aestheticseating.sofa_yellow": "Жовтий диван",
+  "block.aestheticseating.simple_stool_araucaria": "Араукарійський табурет",
+  "block.aestheticseating.simple_chair_araucaria": "Араукарійський стілець",
+  "block.aestheticseating.simple_bench_araucaria": "Араукарійська лавка",
+  "block.aestheticseating.simple_stool_juniper": "Ялівецький табурет",
+  "block.aestheticseating.simple_chair_juniper": "Ялівецький стілець",
+  "block.aestheticseating.simple_bench_juniper": "Ялівецька лавка",
+  "block.aestheticseating.stone_bench_saltmarsh_block": "Солончакова лавка",
+  "block.aestheticseating.stone_bench_dolomite_block": "Доломітова лавка"
 }

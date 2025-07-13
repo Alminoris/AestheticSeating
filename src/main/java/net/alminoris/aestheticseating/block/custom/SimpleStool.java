@@ -8,7 +8,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -170,7 +172,7 @@ public class SimpleStool extends SeatingFurniture
             return ActionResult.SUCCESS;
         }
 
-        if ((stack.getItem() == ModItems.WRENCH) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
+        if ((stack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("aestheticseating", "wrench")))) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
         {
             if (!world.isClient)
             {
