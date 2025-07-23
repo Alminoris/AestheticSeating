@@ -4,11 +4,9 @@ import net.alminoris.aestheticseating.AestheticSeating;
 import net.alminoris.aestheticseating.block.custom.*;
 import net.alminoris.aestheticseating.item.ModItemGroups;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -35,7 +33,7 @@ public class ModBlocks
 
     public static final Dictionary<String, Block> STONE_BENCHES = new Hashtable<>()
     {{
-        for(String name : BlockSetsHelper.STONES)
+        for(String name : BlockSetsHelper.getStones())
         {
             put(name, registerBlock("stone_bench_"+name, new StoneBench()));
         }
@@ -75,14 +73,14 @@ public class ModBlocks
 
     public static Block registerBlock(String name, Block block)
     {
-        registerBlockItem(name, block, ModItemGroups.ASEAT_TAB);
+        registerBlockItem(name, block);
         return Registry.register(Registry.BLOCK, Identifier.of(AestheticSeating.MOD_ID, name), block);
     }
 
-    private static void registerBlockItem(String name, Block block, ItemGroup tab)
+    private static void registerBlockItem(String name, Block block)
     {
         Registry.register(Registry.ITEM, Identifier.of(AestheticSeating.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(tab)));
+                new BlockItem(block, new Item.Settings().group(ModItemGroups.ASEAT_TAB)));
     }
 
     public static void registerBlocks()

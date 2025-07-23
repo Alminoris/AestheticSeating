@@ -14,7 +14,13 @@ public class BlockSetsHelper
 
     public static final String[] STONES =
             {
-                    "blackstone", "andesite", "diorite", "granite",  "deepslate", "basalt", "quartz", "blackstonebricks"
+                    "stone", "tuff", "blackstone", "andesite", "diorite", "granite",  "deepslate", "basalt_side",
+                    "quartz_block_bottom", "stone_bricks", "bricks", "mud_bricks", "sandstone"
+            };
+
+    public static final String[] EXTRA_STONES_WF =
+            {
+                    "dolomite_block", "saltmarsh_block"
             };
 
     public static final String[] WOODS =
@@ -23,10 +29,15 @@ public class BlockSetsHelper
                     "crimson", "warped", "mangrove"
             };
 
-    public static final String[] EXTRA_WOODS =
+    public static final String[] EXTRA_WOODS_AN =
             {
                     "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry",
-                    "bauhinia", "pine", "fir", "cedar", "olive", "tamarisk"
+                    "bauhinia", "pine", "fir", "cedar", "araucaria", "juniper"
+            };
+
+    public static final String[] EXTRA_WOODS_WF =
+            {
+                    "olive", "tamarisk"
             };
 
     public static String[] getWoods()
@@ -35,6 +46,14 @@ public class BlockSetsHelper
         System.arraycopy(WOODS, 0, combinedWoods, 0, WOODS.length);
         System.arraycopy(ModItemGroups.EXTRA_WOODS_AN.toArray(new String[ModItemGroups.EXTRA_WOODS_AN.size()]), 0, combinedWoods, WOODS.length, ModItemGroups.EXTRA_WOODS_AN.size());
         System.arraycopy(ModItemGroups.EXTRA_WOODS_WF.toArray(new String[ModItemGroups.EXTRA_WOODS_WF.size()]), 0, combinedWoods, WOODS.length+ModItemGroups.EXTRA_WOODS_AN.size(), ModItemGroups.EXTRA_WOODS_WF.size());
+        return combinedWoods;
+    }
+
+    public static String[] getStones()
+    {
+        String[] combinedWoods = new String[STONES.length + ModItemGroups.EXTRA_STONES_WF.size()];
+        System.arraycopy(STONES, 0, combinedWoods, 0, STONES.length);
+        System.arraycopy(ModItemGroups.EXTRA_STONES_WF.toArray(new String[ModItemGroups.EXTRA_STONES_WF.size()]), 0, combinedWoods, WOODS.length, ModItemGroups.EXTRA_STONES_WF.size());
         return combinedWoods;
     }
 }

@@ -12,6 +12,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -118,7 +119,7 @@ public class SimpleBench extends SeatingFurniture
             return ActionResult.SUCCESS;
         }
 
-        if ((!currentBackrest) && (stack.getItem() == ModItems.WRENCH) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
+        if ((!currentBackrest) && (player.getMainHandStack().isIn(net.minecraft.tag.TagKey.of(Registry.ITEM_KEY, Identifier.of("aestheticseating", "wrench")))) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
         {
             if (!world.isClient)
             {

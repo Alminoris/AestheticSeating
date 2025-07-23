@@ -128,7 +128,7 @@ public class SimpleStool extends SeatingFurniture
         boolean currentCarpeted = state.get(CARPETED);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (stack.isIn(net.minecraft.tag.ItemTags.WOOL_CARPETS) && !currentCarpeted)
+        if (stack.isIn(ItemTags.WOOL_CARPETS) && !currentCarpeted)
         {
             if (!world.isClient)
             {
@@ -171,7 +171,7 @@ public class SimpleStool extends SeatingFurniture
             return ActionResult.SUCCESS;
         }
 
-        if ((stack.getItem() == ModItems.WRENCH) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
+        if ((player.getMainHandStack().isIn(net.minecraft.tag.TagKey.of(Registry.ITEM_KEY, Identifier.of("aestheticseating", "wrench")))) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
         {
             if (!world.isClient)
             {
