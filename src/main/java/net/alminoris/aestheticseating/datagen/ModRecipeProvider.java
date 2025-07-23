@@ -1,8 +1,10 @@
 package net.alminoris.aestheticseating.datagen;
 
 import net.alminoris.aestheticseating.block.ModBlocks;
+import net.alminoris.aestheticseating.item.ModItemGroups;
 import net.alminoris.aestheticseating.item.ModItems;
 import net.alminoris.aestheticseating.util.helper.BlockSetsHelper;
+import net.alminoris.aestheticseating.util.helper.ModJsonHelper;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
@@ -17,8 +19,6 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider
 {
-
-
     public ModRecipeProvider(FabricDataGenerator dataGenerator)
     {
         super(dataGenerator);
@@ -52,57 +52,55 @@ public class ModRecipeProvider extends FabricRecipeProvider
             String blockName = (name.equals("crimson") || name.equals("warped")) ? "stem" : (name.equals("bamboo") ? "block" : "log");
 
             registerSimpleChair(recipeExporter, ModBlocks.SIMPLE_CHAIRS.get(name),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_slab")),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_"+blockName)));
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
 
             registerSimpleStool(recipeExporter, ModBlocks.SIMPLE_STOOLS.get(name),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_slab")),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_"+blockName)));
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
 
             registerSimpleBench(recipeExporter, ModBlocks.SIMPLE_BENCHES.get(name),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_slab")),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_"+blockName)));
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
         }
 
         for(String name : BlockSetsHelper.COLORS)
         {
             registerSettee(recipeExporter, ModBlocks.SETTEES.get(name),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_wool")));
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_wool")));
 
             registerSofa(recipeExporter, ModBlocks.SOFAS.get(name),
-                    Registry.BLOCK.get(new Identifier("minecraft", name+"_wool")));
+                    Registry.BLOCK.get(Identifier.of("minecraft", name+"_wool")));
         }
 
         for(String name : BlockSetsHelper.COLORS)
         {
-            offerSingleOutputShapelessRecipe(recipeExporter, ModBlocks.CUSHIONS.get(name), Registry.BLOCK.get(new Identifier("minecraft", name+"_wool")), "cushion");
+            offerSingleOutputShapelessRecipe(recipeExporter, ModBlocks.CUSHIONS.get(name), Registry.BLOCK.get(Identifier.of("minecraft", name+"_wool")), "cushion");
         }
 
         for(String name : BlockSetsHelper.STONES)
         {
-            if (!name.equals("blackstonebricks") && !name.equals("quartz") && !name.equals("basalt"))
-            {
-                registerStoneBench(recipeExporter,
-                        Registry.BLOCK.get(new Identifier("minecraft", "polished_"+name)),
-                        Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
-                        ModBlocks.STONE_BENCHES.get(name));
-            }
+            registerVanillaStoneBench(name);
         }
 
-        registerStoneBench(recipeExporter,
-                Registry.BLOCK.get(new Identifier("minecraft", "polished_blackstone_bricks")),
-                Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
-                ModBlocks.STONE_BENCHES.get("blackstonebricks"));
+        for(String name : ModItemGroups.EXTRA_STONES_WF)
+        {
+            registerStoneBench(name, "wildfields");
+        }
 
-        registerStoneBench(recipeExporter,
-                Registry.BLOCK.get(new Identifier("minecraft", "smooth_basalt")),
-                Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
-                ModBlocks.STONE_BENCHES.get("basalt"));
+        for(String name : ModItemGroups.EXTRA_WOODS_AN)
+        {
+            registerSimpleChair(name, "arborealnature");
+            registerSimpleStool(name, "arborealnature");
+            registerSimpleBench(name, "arborealnature");
+        }
 
-        registerStoneBench(recipeExporter,
-                Registry.BLOCK.get(new Identifier("minecraft", "quartz_block")),
-                Registry.BLOCK.get(new Identifier("minecraft", "smooth_stone")),
-                ModBlocks.STONE_BENCHES.get("quartz"));
+        for(String name : ModItemGroups.EXTRA_WOODS_WF)
+        {
+            registerSimpleChair(name, "wildfields");
+            registerSimpleStool(name, "wildfields");
+            registerSimpleBench(name, "wildfields");
+        }
     }
 
     private static void registerSimpleChair(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block slab, Block log)
@@ -130,16 +128,37 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
-    private static void registerStoneBench(Consumer<RecipeJsonProvider> recipeExporter, Block base, Block legs, Block result)
+    private static void registerVanillaStoneBench(String name)
     {
-        ShapedRecipeJsonBuilder.create(result, 1)
-                .pattern("##")
-                .pattern("//")
-                .input('#', base)
-                .input('/', legs)
-                .criterion(hasItem(base), conditionsFromItem(base))
-                .criterion(hasItem(legs), conditionsFromItem(legs))
-                .offerTo(recipeExporter);
+        Block block = Registry.BLOCK.get(Identifier.of("minecraft", name.equals("basalt_side") ? "basalt" :
+                (name.equals("quartz_block_bottom") ? "quartz_block" : name)));
+
+        ModJsonHelper.createShapedRecipe("stone_bench_" + name, "1", "minecraft:smooth_stone", Registry.BLOCK.getId(block).getPath(),
+                "\"##\",", "\"//\"", "");
+    }
+
+    private static void registerStoneBench(String name, String modId)
+    {
+        ModJsonHelper.createShapedRecipe("stone_bench_" + name, "1", "minecraft:smooth_stone", modId+":"+name,
+                "\"##\",", "\"//\"", "");
+    }
+
+    private static void registerSimpleBench(String name, String modId)
+    {
+        ModJsonHelper.createShapedRecipe("simple_bench_" + name, "1", modId+":stripped_"+name+"_log", modId+":"+name+"_log",
+                "\"##\",", "\"//\"", "");
+    }
+
+    private static void registerSimpleChair(String name, String modId)
+    {
+        ModJsonHelper.createShapedRecipe("simple_chair_" + name, "1", modId+":stripped_"+name+"_log", modId+":"+name+"_log",
+                "\"#  \",", "\"###\",", "\"/ /\"");
+    }
+
+    private static void registerSimpleStool(String name, String modId)
+    {
+        ModJsonHelper.createShapedRecipe("simple_chair_" + name, "1", modId+":stripped_"+name+"_log", modId+":"+name+"_log",
+                "\"###\",", "\"/ /\"", "");
     }
 
     private static void registerSimpleStool(Consumer<RecipeJsonProvider> recipeExporter, Block block, Block slab, Block log)

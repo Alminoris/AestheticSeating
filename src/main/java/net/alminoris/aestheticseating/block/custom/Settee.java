@@ -12,11 +12,14 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -63,7 +66,7 @@ public class Settee extends SeatingFurniture
         Direction currentFacing = state.get(FACING);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (stack.getItem() == ModItems.WRENCH)
+        if (player.getMainHandStack().isIn(TagKey.of(Registry.ITEM_KEY, Identifier.of("aestheticseating", "wrench"))))
         {
             if (!world.isClient)
             {
