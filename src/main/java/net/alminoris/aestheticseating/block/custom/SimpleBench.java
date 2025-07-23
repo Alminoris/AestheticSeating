@@ -119,7 +119,7 @@ public class SimpleBench extends SeatingFurniture
             return ActionResult.SUCCESS;
         }
 
-        if ((!currentBackrest) && (player.getMainHandStack().isIn(net.minecraft.tag.TagKey.of(Registry.ITEM_KEY, Identifier.of("aestheticseating", "wrench")))) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
+        if ((!currentBackrest) && (player.getMainHandStack().isIn(net.minecraft.tag.TagKey.of(Registry.ITEM_KEY, new Identifier("aestheticseating", "wrench")))) && (Block.getBlockFromItem(player.getOffHandStack().getItem()) != null))
         {
             if (!world.isClient)
             {

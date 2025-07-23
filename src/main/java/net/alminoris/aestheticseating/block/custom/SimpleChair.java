@@ -118,7 +118,7 @@ public class SimpleChair extends SeatingFurniture
             return ActionResult.SUCCESS;
         }
 
-        if (player.getMainHandStack().isIn(net.minecraft.tag.TagKey.of(Registry.ITEM_KEY, Identifier.of("aestheticseating", "wrench"))))
+        if (player.getMainHandStack().isIn(net.minecraft.tag.TagKey.of(Registry.ITEM_KEY, new Identifier("aestheticseating", "wrench"))))
         {
             if (!world.isClient)
             {

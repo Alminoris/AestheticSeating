@@ -66,7 +66,7 @@ public class Settee extends SeatingFurniture
         Direction currentFacing = state.get(FACING);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (player.getMainHandStack().isIn(TagKey.of(Registry.ITEM_KEY, Identifier.of("aestheticseating", "wrench"))))
+        if (player.getMainHandStack().isIn(TagKey.of(Registry.ITEM_KEY, new Identifier("aestheticseating", "wrench"))))
         {
             if (!world.isClient)
             {
