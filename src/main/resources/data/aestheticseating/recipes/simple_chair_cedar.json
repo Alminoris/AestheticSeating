@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_cedar_log"
+      "item": "arborealnature:cedar_slab"
     },
     "/": {
       "item": "arborealnature:cedar_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_chair_cedar"
+    "item": "aestheticseating:simple_chair_cedar"
   }
 }

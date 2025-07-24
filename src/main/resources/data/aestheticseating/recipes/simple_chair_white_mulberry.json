@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_white_mulberry_log"
+      "item": "arborealnature:white_mulberry_slab"
     },
     "/": {
       "item": "arborealnature:white_mulberry_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_chair_white_mulberry"
+    "item": "aestheticseating:simple_chair_white_mulberry"
   }
 }

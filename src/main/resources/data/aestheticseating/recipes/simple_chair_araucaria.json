@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_araucaria_log"
+      "item": "arborealnature:araucaria_slab"
     },
     "/": {
       "item": "arborealnature:araucaria_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_chair_araucaria"
+    "item": "aestheticseating:simple_chair_araucaria"
   }
 }

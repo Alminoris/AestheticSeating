@@ -31,12 +31,15 @@ public class ModModelProvider extends FabricModelProvider
                 registerSimpleStool(woodName, name, "minecraft");
             }
             registerSimpleBench(woodName, "minecraft");
+            registerSeatingLog(woodName, "minecraft");
             ModJsonHelper.createSimpleChairBlockState(woodName);
             ModJsonHelper.createSimpleBenchBlockState(woodName);
             ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
         }
 
         for(String woodName : BlockSetsHelper.EXTRA_WOODS_AN)
@@ -47,12 +50,15 @@ public class ModModelProvider extends FabricModelProvider
                 registerSimpleStool(woodName, name, "aestheticseating");
             }
             registerSimpleBench(woodName, "aestheticseating");
+            registerSeatingLog(woodName, "aestheticseating");
             ModJsonHelper.createSimpleChairBlockState(woodName);
             ModJsonHelper.createSimpleBenchBlockState(woodName);
             ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
         }
 
         for(String woodName : BlockSetsHelper.EXTRA_WOODS_WF)
@@ -63,12 +69,15 @@ public class ModModelProvider extends FabricModelProvider
                 registerSimpleStool(woodName, name, "aestheticseating");
             }
             registerSimpleBench(woodName, "aestheticseating");
+            registerSeatingLog(woodName, "aestheticseating");
             ModJsonHelper.createSimpleChairBlockState(woodName);
             ModJsonHelper.createSimpleBenchBlockState(woodName);
             ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
         }
 
         for(String name : BlockSetsHelper.STONES)
@@ -104,6 +113,14 @@ public class ModModelProvider extends FabricModelProvider
     {
         itemModelGenerator.register(ModItems.CUSHION_REMOVER, Models.GENERATED);
         itemModelGenerator.register(ModItems.WRENCH, Models.GENERATED);
+    }
+
+    private void registerSeatingLog(String woodName, String modId)
+    {
+        ModJsonHelper.createSeatingLogModel(ModJsonTemplates.SEATING_LOG, woodName, modId,"normal");
+        ModJsonHelper.createSeatingLogModel(ModJsonTemplates.SEATING_LOG_CENTER, woodName, modId,"center");
+        ModJsonHelper.createSeatingLogModel(ModJsonTemplates.SEATING_LOG_LEFT, woodName, modId,"left");
+        ModJsonHelper.createSeatingLogModel(ModJsonTemplates.SEATING_LOG_RIGHT, woodName, modId,"right");
     }
 
     private void registerSimpleChair(String woodVariant, String colorVariant, String modId)
