@@ -1,0 +1,157 @@
+package net.alminoris.aestheticseating.block.custom;
+
+import net.alminoris.aestheticseating.util.helper.VoxelShapeHelper;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SeatingLog extends SeatingFurniture
+{
+    private static final VoxelShape SEAT = SeatingLog.createCuboidShape(2, 0, 5, 14, 6, 11);
+
+    private static final VoxelShape SEAT_CENTER = SeatingLog.createCuboidShape(0, 0, 5, 16, 6, 11);
+
+    private static final VoxelShape SEAT_LEFT = SeatingLog.createCuboidShape(2, 0, 5, 16, 6, 11);
+
+    private static final VoxelShape SEAT_RIGHT = SeatingLog.createCuboidShape(0, 0, 5, 14, 6, 11);
+
+    public enum Variant implements StringIdentifiable
+    {
+        NORMAL("normal"),
+        CENTER("center"),
+        LEFT("left"),
+        RIGHT("right");
+
+        private final String name;
+
+        Variant(String name) { this.name = name; }
+
+        @Override
+        public String asString() { return this.name; }
+    }
+
+    public static final EnumProperty<SeatingLog.Variant> VARIANT = EnumProperty.of("variant", SeatingLog.Variant.class);
+
+    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+
+    public SeatingLog()
+    {
+        super(Settings.copy(Blocks.STONE), -0.3D);
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(VARIANT, Variant.NORMAL));
+    }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx)
+    {
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing());
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder)
+    {
+        builder.add(FACING, VARIANT);
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context)
+    {
+        return getRotatedShape(state);
+    }
+
+    private VoxelShape getRotatedShape(BlockState state)
+    {
+        Direction direction = state.get(FACING);
+
+        List<Box> boxes = new ArrayList<>();
+
+        switch(state.get(VARIANT))
+        {
+            case NORMAL:
+                boxes.add(SEAT.getBoundingBox());
+                break;
+            case CENTER:
+                boxes.add(SEAT_CENTER.getBoundingBox());
+                break;
+            case LEFT:
+                boxes.add(SEAT_LEFT.getBoundingBox());
+                break;
+            case RIGHT:
+                boxes.add(SEAT_RIGHT.getBoundingBox());
+                break;
+        }
+
+        return VoxelShapeHelper.rotateShape(boxes, direction);
+    }
+
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos)
+    {
+        return updateSeatingLogVariant(state, world, pos);
+    }
+
+    @Override
+    public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify)
+    {
+        super.onBlockAdded(state, world, pos, oldState, notify);
+        updateSurroundingSeatingLoges(world, pos);
+    }
+
+    private void updateSurroundingSeatingLoges(World world, BlockPos pos)
+    {
+        for (Direction direction : Direction.Type.HORIZONTAL)
+        {
+            BlockPos neighborPos = pos.offset(direction);
+            BlockState neighborState = world.getBlockState(neighborPos);
+
+            if (neighborState.getBlock() instanceof SeatingLog)
+                world.setBlockState(neighborPos, updateSeatingLogVariant(neighborState, world, neighborPos));
+        }
+    }
+
+    private BlockState updateSeatingLogVariant(BlockState state, WorldAccess world, BlockPos pos)
+    {
+        Direction facing = state.get(FACING);
+
+        BlockPos leftPos = pos.offset(facing.rotateYCounterclockwise());
+        BlockPos rightPos = pos.offset(facing.rotateYClockwise());
+
+        boolean leftConnected = isFullSolidOrMatchingSeatingLog(world, leftPos, facing);
+        boolean rightConnected = isFullSolidOrMatchingSeatingLog(world, rightPos, facing);
+
+        if (leftConnected && rightConnected)
+            return state.with(VARIANT, Variant.CENTER);
+        else if (leftConnected)
+            return state.with(VARIANT, Variant.RIGHT);
+        else if (rightConnected)
+            return state.with(VARIANT, Variant.LEFT);
+        else
+            return state.with(VARIANT, Variant.NORMAL);
+    }
+
+    private boolean isFullSolidOrMatchingSeatingLog(WorldAccess world, BlockPos pos, Direction facing)
+    {
+        BlockState state = world.getBlockState(pos);
+
+        if (state.getBlock() instanceof SeatingLog && state.get(FACING) == facing)
+            return true;
+
+        return state.isOpaque() && state.isFullCube(world, pos) && !state.isAir();
+    }
+}

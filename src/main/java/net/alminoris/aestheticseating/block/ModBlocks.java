@@ -31,6 +31,14 @@ public class ModBlocks
         }
     }};
 
+    public static final Dictionary<String, Block> SEATING_LOGS = new Hashtable<>()
+    {{
+        for(String name : BlockSetsHelper.getWoods())
+        {
+            put(name, registerBlock("seating_log_"+name, new SeatingLog()));
+        }
+    }};
+
     public static final Dictionary<String, Block> STONE_BENCHES = new Hashtable<>()
     {{
         for(String name : BlockSetsHelper.getStones())
