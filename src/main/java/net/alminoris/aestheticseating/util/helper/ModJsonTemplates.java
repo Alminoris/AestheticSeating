@@ -1183,6 +1183,33 @@ public class ModJsonTemplates
             }
             """;
 
+    public static final String SEATING_LOG_BLOCKSTATE_TEMPLATE = """
+            {
+              "variants":
+              {
+                "facing=north,variant=normal": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE" },
+                "facing=south,variant=normal": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE", "y": 180 },
+                "facing=west,variant=normal": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE", "y": 270 },
+                "facing=east,variant=normal": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE", "y": 90 },
+            
+                "facing=north,variant=center": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_center" },
+                "facing=south,variant=center": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_center", "y": 180 },
+                "facing=west,variant=center": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_center", "y": 270 },
+                "facing=east,variant=center": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_center", "y": 90 },
+            
+                "facing=north,variant=left": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_left" },
+                "facing=south,variant=left": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_left", "y": 180 },
+                "facing=west,variant=left": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_left", "y": 270 },
+                "facing=east,variant=left": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_left", "y": 90 },
+            
+                "facing=north,variant=right": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_right" },
+                "facing=south,variant=right": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_right", "y": 180 },
+                "facing=west,variant=right": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_right", "y": 270 },
+                "facing=east,variant=right": { "model": "aestheticseating:block/seating_log_WOOD_NAME_VALUE_right", "y": 90 }
+              }
+            }
+            """;
+
     public static final String SOFA_BLOCKSTATE_TEMPLATE = """
             {
               "variants":
@@ -8462,6 +8489,234 @@ public class ModJsonTemplates
             			"children": [0, 1, 2, 3, 4, 5, 6]
             		}
             	]
+            }
+            """;
+
+    public static String SEATING_LOG = """
+            {
+            	"credit": "Made with Blockbench",
+            	"textures": {
+            		"0": "BASE_NAME",
+            		"1": "LOG_NAME",
+            		"particle": "BASE_NAME"
+            	},
+            	"elements": [
+            		{
+            			"from": [2, 0, 5],
+            			"to": [14, 6, 11],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 8]},
+            			"faces": {
+            				"north": {"uv": [5, 2, 11, 14], "rotation": 90, "texture": "#0"},
+            				"east": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"south": {"uv": [5, 2, 11, 14], "rotation": 90, "texture": "#0"},
+            				"west": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"up": {"uv": [5, 2, 11, 14], "rotation": 90, "texture": "#0"},
+            				"down": {"uv": [5, 2, 11, 14], "rotation": 90, "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"ground": {
+            			"translation": [0, 2, 0],
+            			"scale": [0.5, 0.5, 0.5]
+            		},
+            		"gui": {
+            			"rotation": [20, 45, 0],
+            			"translation": [0, 3, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"fixed": {
+            			"translation": [0, 2.75, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		}
+            	}
+            }
+            """;
+
+    public static String SEATING_LOG_LEFT = """
+            {
+            	"credit": "Made with Blockbench",
+            	"textures": {
+            		"0": "BASE_NAME",
+            		"1": "LOG_NAME",
+            		"particle": "BASE_NAME"
+            	},
+            	"elements": [
+            		{
+            			"from": [2, 0, 5],
+            			"to": [16, 6, 11],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [10, 3, 8]},
+            			"faces": {
+            				"north": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"},
+            				"east": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"south": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"},
+            				"west": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"up": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"},
+            				"down": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"ground": {
+            			"translation": [0, 2, 0],
+            			"scale": [0.5, 0.5, 0.5]
+            		},
+            		"gui": {
+            			"rotation": [20, 45, 0],
+            			"translation": [0, 3, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"fixed": {
+            			"translation": [0, 2.75, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		}
+            	}
+            }
+            """;
+
+    public static String SEATING_LOG_RIGHT = """
+            {
+            	"credit": "Made with Blockbench",
+            	"textures": {
+            		"0": "BASE_NAME",
+            		"1": "LOG_NAME",
+            		"particle": "BASE_NAME"
+            	},
+            	"elements": [
+            		{
+            			"from": [0, 0, 5],
+            			"to": [14, 6, 11],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [8, 3, 8]},
+            			"faces": {
+            				"north": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"},
+            				"east": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"south": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"},
+            				"west": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"up": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"},
+            				"down": {"uv": [5, 1, 11, 15], "rotation": 90, "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"ground": {
+            			"translation": [0, 2, 0],
+            			"scale": [0.5, 0.5, 0.5]
+            		},
+            		"gui": {
+            			"rotation": [20, 45, 0],
+            			"translation": [0, 3, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"fixed": {
+            			"translation": [0, 2.75, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		}
+            	}
+            }
+            """;
+
+    public static String SEATING_LOG_CENTER = """
+            {
+            	"credit": "Made with Blockbench",
+            	"textures": {
+            		"0": "BASE_NAME",
+            		"1": "LOG_NAME",
+            		"particle": "BASE_NAME"
+            	},
+            	"elements": [
+            		{
+            			"from": [0, 0, 5],
+            			"to": [16, 6, 11],
+            			"rotation": {"angle": 0, "axis": "y", "origin": [10, 3, 8]},
+            			"faces": {
+            				"north": {"uv": [5, 0, 11, 16], "rotation": 90, "texture": "#0"},
+            				"east": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"south": {"uv": [5, 0, 11, 16], "rotation": 90, "texture": "#0"},
+            				"west": {"uv": [5, 5, 11, 11], "texture": "#1"},
+            				"up": {"uv": [5, 0, 11, 16], "rotation": 90, "texture": "#0"},
+            				"down": {"uv": [5, 0, 11, 16], "rotation": 90, "texture": "#0"}
+            			}
+            		}
+            	],
+            	"display": {
+            		"thirdperson_righthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"thirdperson_lefthand": {
+            			"translation": [0, 4, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_righthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"firstperson_lefthand": {
+            			"translation": [0, 5, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"ground": {
+            			"translation": [0, 2, 0],
+            			"scale": [0.5, 0.5, 0.5]
+            		},
+            		"gui": {
+            			"rotation": [20, 45, 0],
+            			"translation": [0, 3, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		},
+            		"fixed": {
+            			"translation": [0, 2.75, 0],
+            			"scale": [0.75, 0.75, 0.75]
+            		}
+            	}
             }
             """;
 

@@ -119,6 +119,33 @@ public class ModJsonHelper
         }
     }
 
+    public static void createSeatingLogModel(String jsonContent, String woodName, String modId, String variant)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ AestheticSeating.MOD_ID+"/models/block/";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "seating_log_" + woodName + ((variant.equals("normal")) ? "" : "_" + variant) +  ".json";
+        File modelFile = new File(directory, fileName);
+
+        String logName = (woodName.equals("crimson") || woodName.equals("warped")) ? "stem" : (woodName.equals("bamboo") ? "block" : "log");
+
+        jsonContent = jsonContent.replace("BASE_NAME", modId+":block/"+woodName+"_"+logName).replace("LOG_NAME", modId+":block/"+woodName+"_"+logName+"_top");
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     public static void createSimpleChairBlockState(String woodName)
     {
         String projectPath = System.getProperty("user.dir");
@@ -183,6 +210,31 @@ public class ModJsonHelper
         File modelFile = new File(directory, fileName);
 
         String jsonContent = ModJsonTemplates.STONE_BENCH_BLOCKSTATE_TEMPLATE.replace("STONE_NAME_VALUE", stoneName);
+
+        try (FileWriter writer = new FileWriter(modelFile))
+        {
+            writer.write(jsonContent);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createSeatingLogBlockState(String stoneName)
+    {
+        String projectPath = System.getProperty("user.dir");
+
+        String filePath = projectPath.replace("build\\datagen", "src\\main\\resources") + "/assets/"+ AestheticSeating.MOD_ID+"/blockstates";
+
+        File directory = new File(filePath);
+        if (!directory.exists())
+            directory.mkdirs();
+
+        String fileName = "seating_log_" + stoneName + ".json";
+        File modelFile = new File(directory, fileName);
+
+        String jsonContent = ModJsonTemplates.SEATING_LOG_BLOCKSTATE_TEMPLATE.replace("WOOD_NAME_VALUE", stoneName);
 
         try (FileWriter writer = new FileWriter(modelFile))
         {
