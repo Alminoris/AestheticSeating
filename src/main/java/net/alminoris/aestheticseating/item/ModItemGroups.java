@@ -48,6 +48,10 @@ public class ModItemGroups
                         {
                             entries.add(ModBlocks.STONE_BENCHES.get(name));
                         }
+                        for(String name : BlockSetsHelper.WOODS)
+                        {
+                            entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                        }
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
                             for(String name : EXTRA_WOODS_AN)
@@ -61,6 +65,10 @@ public class ModItemGroups
                             for(String name : EXTRA_WOODS_AN)
                             {
                                 entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : EXTRA_WOODS_AN)
+                            {
+                                entries.add(ModBlocks.SEATING_LOGS.get(name));
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("wildfields"))
@@ -76,6 +84,10 @@ public class ModItemGroups
                             for(String name : EXTRA_WOODS_WF)
                             {
                                 entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : EXTRA_WOODS_WF)
+                            {
+                                entries.add(ModBlocks.SEATING_LOGS.get(name));
                             }
                         }
                         for(String name : BlockSetsHelper.COLORS)

@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_hawthorn_log"
+      "item": "arborealnature:hawthorn_slab"
     },
     "/": {
       "item": "arborealnature:hawthorn_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_chair_hawthorn"
+    "item": "aestheticseating:simple_chair_hawthorn"
   }
 }

@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_plum_log"
+      "item": "arborealnature:plum_slab"
     },
     "/": {
       "item": "arborealnature:plum_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_bench_plum"
+    "item": "aestheticseating:simple_bench_plum"
   }
 }

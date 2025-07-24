@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_quince_log"
+      "item": "arborealnature:quince_slab"
     },
     "/": {
       "item": "arborealnature:quince_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_chair_quince"
+    "item": "aestheticseating:simple_chair_quince"
   }
 }

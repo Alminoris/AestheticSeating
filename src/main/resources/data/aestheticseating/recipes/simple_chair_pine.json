@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "arborealnature:stripped_pine_log"
+      "item": "arborealnature:pine_slab"
     },
     "/": {
       "item": "arborealnature:pine_log"
@@ -16,6 +16,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "aestheticseating:simple_chair_pine"
+    "item": "aestheticseating:simple_chair_pine"
   }
 }
