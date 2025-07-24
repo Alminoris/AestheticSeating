@@ -63,6 +63,9 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerSimpleBench(recipeExporter, ModBlocks.SIMPLE_BENCHES.get(name),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_slab")),
                     Registries.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
+
+            registerSeatingLog(recipeExporter, ModBlocks.SEATING_LOGS.get(name),
+                    Registries.BLOCK.get(Identifier.of("minecraft", name+"_"+blockName)));
         }
 
         for(String name : BlockSetsHelper.COLORS)
@@ -94,6 +97,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerSimpleChair(name, "arborealnature");
             registerSimpleStool(name, "arborealnature");
             registerSimpleBench(name, "arborealnature");
+            registerSeatingLog(name, "arborealnature");
         }
 
         for(String name : BlockSetsHelper.EXTRA_WOODS_WF)
@@ -101,6 +105,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerSimpleChair(name, "wildfields");
             registerSimpleStool(name, "wildfields");
             registerSimpleBench(name, "wildfields");
+            registerSeatingLog(name, "wildfields");
         }
     }
 
@@ -129,6 +134,15 @@ public class ModRecipeProvider extends FabricRecipeProvider
                 .offerTo(recipeExporter);
     }
 
+    private static void registerSeatingLog(RecipeExporter recipeExporter, Block block, Block log)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, block, 1)
+                .pattern("##")
+                .input('#', log)
+                .criterion(hasItem(log), conditionsFromItem(log))
+                .offerTo(recipeExporter);
+    }
+
     private static void registerVanillaStoneBench(String name)
     {
         Block block = Registries.BLOCK.get(Identifier.ofVanilla(name.equals("basalt_side") ? "basalt" :
@@ -146,19 +160,25 @@ public class ModRecipeProvider extends FabricRecipeProvider
 
     private static void registerSimpleBench(String name, String modId)
     {
-        ModJsonHelper.createShapedRecipe("simple_bench_" + name, "1", modId+":stripped_"+name+"_log", modId+":"+name+"_log",
+        ModJsonHelper.createShapedRecipe("simple_bench_" + name, "1", modId+":"+name+"_slab", modId+":"+name+"_log",
                 "\"##\",", "\"//\"", "");
+    }
+
+    private static void registerSeatingLog(String name, String modId)
+    {
+        ModJsonHelper.createShapedRecipe("seating_log_" + name, "1", modId+":"+name+"_log", modId+":"+name+"_log",
+                "\"#/\"", "", "");
     }
 
     private static void registerSimpleChair(String name, String modId)
     {
-        ModJsonHelper.createShapedRecipe("simple_chair_" + name, "1", modId+":stripped_"+name+"_log", modId+":"+name+"_log",
+        ModJsonHelper.createShapedRecipe("simple_chair_" + name, "1", modId+":"+name+"_slab", modId+":"+name+"_log",
                 "\"#  \",", "\"###\",", "\"/ /\"");
     }
 
     private static void registerSimpleStool(String name, String modId)
     {
-        ModJsonHelper.createShapedRecipe("simple_chair_" + name, "1", modId+":stripped_"+name+"_log", modId+":"+name+"_log",
+        ModJsonHelper.createShapedRecipe("simple_chair_" + name, "1", modId+":"+name+"_slab", modId+":"+name+"_log",
                 "\"###\",", "\"/ /\"", "");
     }
 
