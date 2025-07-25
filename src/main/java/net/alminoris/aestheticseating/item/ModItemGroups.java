@@ -50,7 +50,7 @@ public class ModItemGroups
                         }
                         for(String name : BlockSetsHelper.WOODS)
                         {
-                            entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            entries.add(ModBlocks.SEATING_LOGS.get(name));
                         }
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
