@@ -29,7 +29,7 @@ public class SeatEntityPool
         else
         {
             seat.setPosition(pos.getX() + 0.5, pos.getY()+seatY, pos.getZ() + 0.5);
-            seat.cleanupTimer = 0; // Reset cleanup timer to prevent immediate removal
+            seat.cleanupTimer = 0;
         }
         return seat;
     }
@@ -42,5 +42,4 @@ public class SeatEntityPool
             availableSeats.offer(seatEntity);
         }
     }
-
 }

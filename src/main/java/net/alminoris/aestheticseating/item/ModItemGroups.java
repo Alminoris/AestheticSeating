@@ -12,24 +12,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import static net.alminoris.aestheticseating.util.helper.BlockSetsHelper.*;
+
 public class ModItemGroups
 {
-    public static final String[] EXTRA_WOODS_WF =
-            {
-                    "olive", "tamarisk"
-            };
-
-    public static final String[] EXTRA_STONES_WF =
-            {
-                    "dolomite_block", "saltmarsh_block"
-            };
-
-    public static final String[] EXTRA_WOODS_AN =
-            {
-                    "hazelnut", "hornbeam", "hawthorn", "quince", "plum", "mango", "fig", "viburnum", "white_mulberry", "wild_cherry",
-                    "bauhinia", "pine", "fir", "cedar", "araucaria", "juniper"
-            };
-
     public static final ItemGroup ASEAT_TAB = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(AestheticSeating.MOD_ID, "aseattab"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.aseattab"))
@@ -59,42 +45,118 @@ public class ModItemGroups
                         }
                         if (FabricLoader.getInstance().isModLoaded("arborealnature"))
                         {
-                            for(String name : EXTRA_WOODS_AN)
+                            for(String name : AN_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
                             }
-                            for(String name : EXTRA_WOODS_AN)
+                            for(String name : AN_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
                             }
-                            for(String name : EXTRA_WOODS_AN)
+                            for(String name : AN_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
                             }
-                            for(String name : EXTRA_WOODS_AN)
+                            for(String name : AN_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SEATING_LOGS.get(name));
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("wildfields"))
                         {
-                            for(String name : EXTRA_WOODS_WF)
+                            for(String name : WF_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
                             }
-                            for(String name : EXTRA_WOODS_WF)
+                            for(String name : WF_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
                             }
-                            for(String name : EXTRA_WOODS_WF)
+                            for(String name : WF_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
                             }
-                            for(String name : BlockSetsHelper.EXTRA_STONES_WF)
+                            for(String name : EXTRA_STONES_WF)
                             {
                                 entries.add(ModBlocks.STONE_BENCHES.get(name));
                             }
-                            for(String name : EXTRA_WOODS_WF)
+                            for(String name : WF_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SEATING_LOGS.get(name));
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("silverwoodtrees"))
+                        {
+                            for(String name : ST_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
+                            }
+                            for(String name : ST_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                            }
+                            for(String name : ST_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : ST_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SEATING_LOGS.get(name));
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("whisperleaftrees"))
+                        {
+                            for(String name : WT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
+                            }
+                            for(String name : WT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                            }
+                            for(String name : WT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : WT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SEATING_LOGS.get(name));
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("missingtrees"))
+                        {
+                            for(String name : MT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
+                            }
+                            for(String name : MT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                            }
+                            for(String name : MT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : MT_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SEATING_LOGS.get(name));
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("natures_spirit"))
+                        {
+                            for(String name : NSS_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_CHAIRS.get(name));
+                            }
+                            for(String name : NSS_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_STOOLS.get(name));
+                            }
+                            for(String name : NSS_WOOD_NAMES)
+                            {
+                                entries.add(ModBlocks.SIMPLE_BENCHES.get(name));
+                            }
+                            for(String name : NSS_WOOD_NAMES)
                             {
                                 entries.add(ModBlocks.SEATING_LOGS.get(name));
                             }
