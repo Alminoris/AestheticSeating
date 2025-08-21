@@ -300,5 +300,9 @@
   "block.aestheticseating.seating_log_saxaul_nss": "Saxaul Seating Log",
   "block.aestheticseating.seating_log_sugi_nss": "Sugi Seating Log",
   "block.aestheticseating.seating_log_willow_nss": "Willow Seating Log",
-  "block.aestheticseating.seating_log_wisteria_nss": "Wisteria Seating Log"
+  "block.aestheticseating.seating_log_wisteria_nss": "Wisteria Seating Log",
+
+  "block.aestheticseating.stone_bench_loessic_marl_block": "Loessic Marl Stone Bench",
+  "block.aestheticseating.stone_bench_loamy_marl_block": "Loamy Marl Stone Bench",
+  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Fossil Marlstone Stone Bench"
 }

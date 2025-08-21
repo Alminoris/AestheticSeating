@@ -300,5 +300,8 @@
   "block.aestheticseating.seating_log_saxaul_nss": "Саксауловое сиденье",
   "block.aestheticseating.seating_log_sugi_nss": "Сиденье из криптомерии",
   "block.aestheticseating.seating_log_willow_nss": "Ивовое сиденье",
-  "block.aestheticseating.seating_log_wisteria_nss": "Сиденье из глицинии"
+  "block.aestheticseating.seating_log_wisteria_nss": "Сиденье из глицинии",
+  "block.aestheticseating.stone_bench_loessic_marl_block": "Лавка из лёссового мергеля",
+  "block.aestheticseating.stone_bench_loamy_marl_block": "Лавка из суглинистого мергеля",
+  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Лавка из ископаемого мергеля"
 }

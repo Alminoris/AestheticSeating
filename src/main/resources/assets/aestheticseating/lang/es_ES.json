@@ -299,5 +299,8 @@
   "block.aestheticseating.seating_log_saxaul_nss": "Asiento de saksaul",
   "block.aestheticseating.seating_log_sugi_nss": "Asiento de sugi",
   "block.aestheticseating.seating_log_willow_nss": "Asiento de sauce",
-  "block.aestheticseating.seating_log_wisteria_nss": "Asiento de glicinia"
+  "block.aestheticseating.seating_log_wisteria_nss": "Asiento de glicinia",
+  "block.aestheticseating.stone_bench_loessic_marl_block": "Banco de marga loésica",
+  "block.aestheticseating.stone_bench_loamy_marl_block": "Banco de marga arcillosa",
+  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Banco de marga fósil"
 }

@@ -299,5 +299,8 @@
   "block.aestheticseating.seating_log_saxaul_nss": "Siège en saxaoul",
   "block.aestheticseating.seating_log_sugi_nss": "Siège en sugi",
   "block.aestheticseating.seating_log_willow_nss": "Siège en saule",
-  "block.aestheticseating.seating_log_wisteria_nss": "Siège en glycine"
+  "block.aestheticseating.seating_log_wisteria_nss": "Siège en glycine",
+  "block.aestheticseating.stone_bench_loessic_marl_block": "Banc en marne lœssique",
+  "block.aestheticseating.stone_bench_loamy_marl_block": "Banc en marne argileuse",
+  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Banc en marne fossile"
 }
