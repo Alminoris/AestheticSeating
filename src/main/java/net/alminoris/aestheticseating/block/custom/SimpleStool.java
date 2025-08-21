@@ -235,6 +235,7 @@ public class SimpleStool extends SeatingFurniture
 
     private String checkForWrenching(String name)
     {
+        name = name.replace("_nss", "");
         String[] nameArr = name.split("_");
         String formRes;
         if (nameArr[0].equals("stripped"))

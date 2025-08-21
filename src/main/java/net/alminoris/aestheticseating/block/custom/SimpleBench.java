@@ -154,6 +154,7 @@ public class SimpleBench extends SeatingFurniture
 
     private String checkForWrenching(String name)
     {
+        name = name.replace("_nss", "");
         String[] nameArr = name.split("_");
         if (nameArr[0].equals("stripped"))
         {

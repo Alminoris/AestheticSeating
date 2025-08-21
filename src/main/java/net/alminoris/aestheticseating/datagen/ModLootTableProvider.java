@@ -15,15 +15,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
     @Override
     public void generateBlockLootTables()
     {
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             addDrop(ModBlocks.SIMPLE_CHAIRS.get(name));
         }
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             addDrop(ModBlocks.SIMPLE_BENCHES.get(name));
         }
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             addDrop(ModBlocks.SEATING_LOGS.get(name));
         }
@@ -31,7 +31,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
         {
             addDrop(ModBlocks.STONE_BENCHES.get(name));
         }
-        for(String name : BlockSetsHelper.WOODS)
+        for(String name : BlockSetsHelper.getWoods())
         {
             addDrop(ModBlocks.SIMPLE_STOOLS.get(name));
         }

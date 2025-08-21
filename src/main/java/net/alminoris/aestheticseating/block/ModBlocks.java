@@ -18,9 +18,7 @@ public class ModBlocks
     public static final Dictionary<String, Block> SIMPLE_CHAIRS = new Hashtable<>()
     {{
         for(String name : BlockSetsHelper.getWoods())
-        {
             put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
-        }
     }};
 
     public static final Dictionary<String, Block> SEATING_LOGS = new Hashtable<>()
