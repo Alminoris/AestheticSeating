@@ -128,7 +128,7 @@ public class SimpleStool extends SeatingFurniture
         boolean currentCarpeted = state.get(CARPETED);
         ItemStack stack = player.getStackInHand(hand);
 
-        if (stack.isIn(ItemTags.CARPETS) && !currentCarpeted)
+        if (stack.isIn(ItemTags.WOOL_CARPETS) && !currentCarpeted)
         {
             if (!world.isClient)
             {
