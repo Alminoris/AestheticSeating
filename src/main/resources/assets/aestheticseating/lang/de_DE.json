@@ -299,5 +299,8 @@
   "block.aestheticseating.seating_log_saxaul_nss": "Saxaul-Sitz",
   "block.aestheticseating.seating_log_sugi_nss": "Sugi-Sitz",
   "block.aestheticseating.seating_log_willow_nss": "Weiden-Sitz",
-  "block.aestheticseating.seating_log_wisteria_nss": "Glyzinien-Sitz"
+  "block.aestheticseating.seating_log_wisteria_nss": "Glyzinien-Sitz",
+  "block.aestheticseating.stone_bench_loessic_marl_block": "Bank aus Lössmergel",
+  "block.aestheticseating.stone_bench_loamy_marl_block": "Bank aus lehmigem Mergel",
+  "block.aestheticseating.stone_bench_fossil_marlstone_block": "Bank aus fossilem Mergelstein"
 }

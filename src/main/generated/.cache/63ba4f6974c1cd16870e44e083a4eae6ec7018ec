@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-21T07:05:44.179581	Aesthetic Seating/Recipes
+// 1.20.1	2025-08-21T09:30:28.8679205	Aesthetic Seating/Recipes
 5c9ed4b9380f6f39e026c5439626f2a3b6afff39 data\aestheticseating\advancements\recipes\misc\cushion_white_from_white_wool.json
 72ef819a2ca20b8193e19cb4e3193c3d3a630592 data\aestheticseating\recipes\cushion_remover.json
 ac2864b7791e6bb395bdd8b7168f7d161ac5fff2 data\aestheticseating\advancements\recipes\decorations\simple_chair_birch.json
@@ -170,8 +170,8 @@ dd1904a8b8bf7a1ed39957b6b00e94d8f7f42e0c data\aestheticseating\advancements\reci
 67be068618ec4973d86838bd324155a9b1050157 data\aestheticseating\advancements\recipes\decorations\settee_cyan.json
 642010aca1e84d3d82054ccf786646252321d7c7 data\aestheticseating\advancements\recipes\decorations\settee_green.json
 065ca076c7f74edda263e3b67e827eb961de9c3f data\aestheticseating\recipes\sofa_red.json
-ce01213b6cbf02db0d1d1a7a081168c87d770981 data\aestheticseating\recipes\seating_log_jungle.json
 11904e1010f62be8df309a30d0d083e261bd0fdb data\aestheticseating\recipes\simple_chair_acacia.json
+ce01213b6cbf02db0d1d1a7a081168c87d770981 data\aestheticseating\recipes\seating_log_jungle.json
 57e52bd0a8c24640092f2e20cadbc4820d5dc768 data\aestheticseating\recipes\settee_light_blue.json
 3b2b259cd24317487530eae20e69ee89bfe859fc data\aestheticseating\advancements\recipes\misc\cushion_black_from_black_wool.json
 5c703cc4d8649f903fe304c532b7511751595a7b data\aestheticseating\advancements\recipes\decorations\cushion_remover.json
