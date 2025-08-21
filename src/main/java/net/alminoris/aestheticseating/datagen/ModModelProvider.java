@@ -42,7 +42,7 @@ public class ModModelProvider extends FabricModelProvider
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
         }
 
-        for(String woodName : BlockSetsHelper.EXTRA_WOODS_AN)
+        for(String woodName : BlockSetsHelper.AN_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {
@@ -61,7 +61,83 @@ public class ModModelProvider extends FabricModelProvider
             blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
         }
 
-        for(String woodName : BlockSetsHelper.EXTRA_WOODS_WF)
+        for(String woodName : BlockSetsHelper.WF_WOOD_NAMES)
+        {
+            for(String name : BlockSetsHelper.COLORS)
+            {
+                registerSimpleChair(woodName, name, "aestheticseating");
+                registerSimpleStool(woodName, name, "aestheticseating");
+            }
+            registerSimpleBench(woodName, "aestheticseating");
+            registerSeatingLog(woodName, "aestheticseating");
+            ModJsonHelper.createSimpleChairBlockState(woodName);
+            ModJsonHelper.createSimpleBenchBlockState(woodName);
+            ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
+        }
+
+        for(String woodName : BlockSetsHelper.ST_WOOD_NAMES)
+        {
+            for(String name : BlockSetsHelper.COLORS)
+            {
+                registerSimpleChair(woodName, name, "aestheticseating");
+                registerSimpleStool(woodName, name, "aestheticseating");
+            }
+            registerSimpleBench(woodName, "aestheticseating");
+            registerSeatingLog(woodName, "aestheticseating");
+            ModJsonHelper.createSimpleChairBlockState(woodName);
+            ModJsonHelper.createSimpleBenchBlockState(woodName);
+            ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
+        }
+
+        for(String woodName : BlockSetsHelper.WT_WOOD_NAMES)
+        {
+            for(String name : BlockSetsHelper.COLORS)
+            {
+                registerSimpleChair(woodName, name, "aestheticseating");
+                registerSimpleStool(woodName, name, "aestheticseating");
+            }
+            registerSimpleBench(woodName, "aestheticseating");
+            registerSeatingLog(woodName, "aestheticseating");
+            ModJsonHelper.createSimpleChairBlockState(woodName);
+            ModJsonHelper.createSimpleBenchBlockState(woodName);
+            ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
+        }
+
+        for(String woodName : BlockSetsHelper.MT_WOOD_NAMES)
+        {
+            for(String name : BlockSetsHelper.COLORS)
+            {
+                registerSimpleChair(woodName, name, "aestheticseating");
+                registerSimpleStool(woodName, name, "aestheticseating");
+            }
+            registerSimpleBench(woodName, "aestheticseating");
+            registerSeatingLog(woodName, "aestheticseating");
+            ModJsonHelper.createSimpleChairBlockState(woodName);
+            ModJsonHelper.createSimpleBenchBlockState(woodName);
+            ModJsonHelper.createSimpleStoolBlockState(woodName);
+            ModJsonHelper.createSeatingLogBlockState(woodName);
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_CHAIRS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_chair_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_BENCHES.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/simple_bench_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SIMPLE_STOOLS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/black/simple_stool_normal_"+woodName));
+            blockStateModelGenerator.registerParentedItemModel(ModBlocks.SEATING_LOGS.get(woodName), Identifier.of(AestheticSeating.MOD_ID, "block/seating_log_"+woodName));
+        }
+
+        for(String woodName : BlockSetsHelper.NSS_WOOD_NAMES)
         {
             for(String name : BlockSetsHelper.COLORS)
             {

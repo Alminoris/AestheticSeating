@@ -91,7 +91,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerStoneBench(name, "wildfields");
         }
 
-        for(String name : BlockSetsHelper.EXTRA_WOODS_AN)
+        for(String name : BlockSetsHelper.AN_WOOD_NAMES)
         {
             registerSimpleChair(name, "arborealnature");
             registerSimpleStool(name, "arborealnature");
@@ -99,12 +99,44 @@ public class ModRecipeProvider extends FabricRecipeProvider
             registerSeatingLog(name, "arborealnature");
         }
 
-        for(String name : BlockSetsHelper.EXTRA_WOODS_WF)
+        for(String name : BlockSetsHelper.WF_WOOD_NAMES)
         {
             registerSimpleChair(name, "wildfields");
             registerSimpleStool(name, "wildfields");
             registerSimpleBench(name, "wildfields");
             registerSeatingLog(name, "wildfields");
+        }
+
+        for(String name : BlockSetsHelper.ST_WOOD_NAMES)
+        {
+            registerSimpleChair(name, "silverwoodtrees");
+            registerSimpleStool(name, "silverwoodtrees");
+            registerSimpleBench(name, "silverwoodtrees");
+            registerSeatingLog(name, "silverwoodtrees");
+        }
+
+        for(String name : BlockSetsHelper.WT_WOOD_NAMES)
+        {
+            registerSimpleChair(name, "whisperleaftrees");
+            registerSimpleStool(name, "whisperleaftrees");
+            registerSimpleBench(name, "whisperleaftrees");
+            registerSeatingLog(name, "whisperleaftrees");
+        }
+
+        for(String name : BlockSetsHelper.MT_WOOD_NAMES)
+        {
+            registerSimpleChair(name, "missingtrees");
+            registerSimpleStool(name, "missingtrees");
+            registerSimpleBench(name, "missingtrees");
+            registerSeatingLog(name, "missingtrees");
+        }
+
+        for(String name : BlockSetsHelper.NSS_WOOD_NAMES)
+        {
+            registerSimpleChair(name, "natures_spirit");
+            registerSimpleStool(name, "natures_spirit");
+            registerSimpleBench(name, "natures_spirit");
+            registerSeatingLog(name, "natures_spirit");
         }
     }
 
