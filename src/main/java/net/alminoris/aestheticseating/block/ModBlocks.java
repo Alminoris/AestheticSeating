@@ -18,8 +18,14 @@ public class ModBlocks
     public static final Dictionary<String, Block> SIMPLE_CHAIRS = new Hashtable<>()
     {{
         for(String name : BlockSetsHelper.getWoods())
-        {
             put(name, registerBlock("simple_chair_"+name, new SimpleChair()));
+    }};
+
+    public static final Dictionary<String, Block> SEATING_LOGS = new Hashtable<>()
+    {{
+        for(String name : BlockSetsHelper.getWoods())
+        {
+            put(name, registerBlock("seating_log_"+name, new SeatingLog()));
         }
     }};
 
@@ -82,12 +88,12 @@ public class ModBlocks
     public static Block registerBlock(String name, Block block)
     {
         registerBlockItem(name, block);
-        return Registry.register(Registry.BLOCK, Identifier.of(AestheticSeating.MOD_ID, name), block);
+        return Registry.register(Registry.BLOCK, new Identifier(AestheticSeating.MOD_ID, name), block);
     }
 
     private static void registerBlockItem(String name, Block block)
     {
-        Registry.register(Registry.ITEM, Identifier.of(AestheticSeating.MOD_ID, name),
+        Registry.register(Registry.ITEM, new Identifier(AestheticSeating.MOD_ID, name),
                 new BlockItem(block, new Item.Settings().group(ModItemGroups.ASEAT_TAB)));
     }
 
