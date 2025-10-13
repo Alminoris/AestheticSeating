@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "lime",
+		"0": "minecraft:block/lime_wool",
 		"1": "aestheticseating:block/stripped_viburnum_log",
 		"2": "aestheticseating:block/viburnum_log",
 		"particle": "aestheticseating:block/stripped_viburnum_log"

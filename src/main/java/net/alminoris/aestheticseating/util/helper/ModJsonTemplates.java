@@ -207,7 +207,7 @@ public class ModJsonTemplates
             	"credit": "Made with Blockbench",
             	"texture_size": [32, 32],
             	"textures": {
-            		"0": "COLOR_NAME",
+            		"0": "minecraft:block/COLOR_NAME_wool",
             		"1": "BASE_NAME",
             		"2": "LOG_NAME",
             		"particle": "BASE_NAME"
@@ -621,7 +621,7 @@ public class ModJsonTemplates
             	"credit": "Made with Blockbench",
             	"texture_size": [32, 32],
             	"textures": {
-            		"0": "COLOR_NAME",
+            		"0": "minecraft:block/COLOR_NAME_wool",
             		"1": "BASE_NAME",
             		"2": "LOG_NAME",
             		"particle": "BASE_NAME"
@@ -3032,7 +3032,7 @@ public class ModJsonTemplates
             	"credit": "Made with Blockbench",
             	"texture_size": [32, 32],
             	"textures": {
-            		"0": "COLOR_NAME",
+            		"0": "minecraft:block/COLOR_NAME_wool",
             		"1": "BASE_NAME",
             		"2": "LOG_NAME",
             		"particle": "BASE_NAME"
@@ -3232,7 +3232,7 @@ public class ModJsonTemplates
             	"credit": "Made with Blockbench",
             	"texture_size": [32, 32],
             	"textures": {
-            		"0": "COLOR_NAME",
+            		"0": "minecraft:block/COLOR_NAME_wool",
             		"1": "BASE_NAME",
             		"2": "LOG_NAME",
             		"particle": "BASE_NAME"
@@ -3516,7 +3516,7 @@ public class ModJsonTemplates
             	"credit": "Made with Blockbench",
             	"texture_size": [32, 32],
             	"textures": {
-            		"0": "COLOR_NAME",
+            		"0": "minecraft:block/COLOR_NAME_wool",
             		"1": "LOG_NAME",
             		"2": "BASE_NAME",
             		"particle": "BASE_NAME"
