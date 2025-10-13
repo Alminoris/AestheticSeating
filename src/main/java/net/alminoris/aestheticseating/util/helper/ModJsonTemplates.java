@@ -1577,6 +1577,10 @@ public class ModJsonTemplates
             {
             	"credit": "Made with Blockbench",
             	"texture_size": [64, 64],
+            	"textures": {
+            		"0": "COLOR_NAME",
+            		"particle": "COLOR_NAME"
+            	},
             	"elements": [
             		{
             			"from": [-4, 0, 0],
