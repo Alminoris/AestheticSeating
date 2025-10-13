@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "red",
+		"0": "minecraft:block/red_wool",
 		"1": "aestheticseating:block/stripped_wild_cherry_log",
 		"2": "aestheticseating:block/wild_cherry_log",
 		"particle": "aestheticseating:block/stripped_wild_cherry_log"

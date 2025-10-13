@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "brown",
+		"0": "minecraft:block/brown_wool",
 		"1": "minecraft:block/mangrove_log",
 		"2": "minecraft:block/stripped_mangrove_log",
 		"particle": "minecraft:block/stripped_mangrove_log"

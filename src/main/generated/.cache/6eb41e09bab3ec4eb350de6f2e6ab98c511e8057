@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-21T09:30:28.799983	Aesthetic Seating/Model Definitions
+// 1.20.1	2025-10-13T07:28:47.0830675	Aesthetic Seating/Model Definitions
 d17646697ed2060076b9811d39a817739e43a3a5 assets\aestheticseating\models\item\simple_bench_mahogany_nss.json
 ee08e8d544b7680f8641b04ed231566d8cc4c20a assets\aestheticseating\models\item\stone_bench_granite.json
 9b7f6a811775ba35e3de3f456b12a3f6f8f9c496 assets\aestheticseating\models\item\simple_stool_willow.json
@@ -120,8 +120,8 @@ be3e76a8c7f8b30edc2f4d5eba490f58c7e84601 assets\aestheticseating\models\item\set
 3625f83d5d0fcdd9078d72b4829a6bd79dd739d6 assets\aestheticseating\models\item\settee_light_gray.json
 c6aca28cccf16bbd737462db26c846810bea5673 assets\aestheticseating\blockstates\cushion_pink.json
 0d26285378441818a60571f2b80c44f7fe6fd58c assets\aestheticseating\models\item\simple_chair_quince.json
-68981995b6f191ea8705ad805ded2e10c44d803b assets\aestheticseating\models\item\sofa_light_blue.json
 8bbfd8e411bb63741c798c16a963f6804791c476 assets\aestheticseating\models\item\seating_log_aspen_nss.json
+68981995b6f191ea8705ad805ded2e10c44d803b assets\aestheticseating\models\item\sofa_light_blue.json
 3a4fef63979e3389709599d08a8dea702ca0986f assets\aestheticseating\models\item\simple_bench_aspen.json
 ea15f5aa50010dcfd4c40b932e72974df4b90d45 assets\aestheticseating\models\item\simple_bench_palo_verde_nss.json
 29b49a4668ded2d9a21d30555c2b5295e1a93650 assets\aestheticseating\models\item\simple_chair_maple_nss.json
