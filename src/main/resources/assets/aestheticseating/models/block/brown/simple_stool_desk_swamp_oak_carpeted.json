@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "brown",
+		"0": "minecraft:block/brown_wool",
 		"1": "aestheticseating:block/swamp_oak_log",
 		"2": "aestheticseating:block/stripped_swamp_oak_log",
 		"particle": "aestheticseating:block/stripped_swamp_oak_log"

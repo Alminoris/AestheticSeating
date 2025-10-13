@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "cyan",
+		"0": "minecraft:block/cyan_wool",
 		"1": "aestheticseating:block/stripped_aspen_log",
 		"2": "aestheticseating:block/aspen_log",
 		"particle": "aestheticseating:block/stripped_aspen_log"

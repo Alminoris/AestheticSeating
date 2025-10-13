@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "light_gray",
+		"0": "minecraft:block/light_gray_wool",
 		"1": "aestheticseating:block/stripped_maple_nss_log",
 		"2": "aestheticseating:block/maple_nss_log",
 		"particle": "aestheticseating:block/stripped_maple_nss_log"

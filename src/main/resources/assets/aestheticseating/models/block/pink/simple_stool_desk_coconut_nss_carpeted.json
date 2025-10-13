@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "pink",
+		"0": "minecraft:block/pink_wool",
 		"1": "aestheticseating:block/coconut_nss_log",
 		"2": "aestheticseating:block/stripped_coconut_nss_log",
 		"particle": "aestheticseating:block/stripped_coconut_nss_log"

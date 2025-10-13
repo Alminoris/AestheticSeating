@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "gray",
+		"0": "minecraft:block/gray_wool",
 		"1": "aestheticseating:block/stripped_ghaf_nss_log",
 		"2": "aestheticseating:block/ghaf_nss_log",
 		"particle": "aestheticseating:block/stripped_ghaf_nss_log"

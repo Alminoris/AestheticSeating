@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-21T10:17:47.8901131	Aesthetic Seating/Block Loot Tables
+// 1.21.1	2025-10-12T23:23:48.5193303	Aesthetic Seating/Block Loot Tables
 490e03f4ea2bd4435d5c73fa5e70cba40475d81c data\aestheticseating\loot_table\blocks\simple_chair_aspen_nss.json
 04c2c5c19e5ae192386c544272d8bc1740efadd4 data\aestheticseating\loot_table\blocks\seating_log_crimson.json
 06a7eb38c0a58cad45ea897a58dd544cefcafa1d data\aestheticseating\loot_table\blocks\seating_log_azalea.json
@@ -137,8 +137,8 @@ ddf5d793841355a8cf5447c64a45ca62bbed2b06 data\aestheticseating\loot_table\blocks
 ea9351da4a340e19c29873574e732c9723be8ded data\aestheticseating\loot_table\blocks\simple_stool_cedar.json
 07e3e0f83f1744c7c6fcec888ef32c413f25cbf1 data\aestheticseating\loot_table\blocks\simple_stool_poplar.json
 782e1feeec152d50b773c7cbc577e0239ac367a5 data\aestheticseating\loot_table\blocks\simple_bench_western_serviceberry.json
-5743c6799b793a3b26792fb0b573c4428b5c9083 data\aestheticseating\loot_table\blocks\simple_chair_pine.json
 80da3358fef6318df29c7d2e9c163f36bc228a8f data\aestheticseating\loot_table\blocks\simple_chair_acacia.json
+5743c6799b793a3b26792fb0b573c4428b5c9083 data\aestheticseating\loot_table\blocks\simple_chair_pine.json
 6e95c27641acacd24d5742ba6543687c52554503 data\aestheticseating\loot_table\blocks\seating_log_araucaria.json
 d9f1090aa6722020c0365f8440df51e906f2f834 data\aestheticseating\loot_table\blocks\simple_chair_plum.json
 202cb50431a2f09baedd7611d4b0515a756b5b6e data\aestheticseating\loot_table\blocks\cushion_cyan.json
