@@ -31,7 +31,7 @@ public class ModLanguageProviderRuRu extends FabricLanguageProvider
         woodenFurniture.put("seating_log_", "Сиденье из %s");
 
         Map<String, String> stoneFurniture = new LinkedHashMap<>();
-        stoneFurniture.put("stone_bench", "Скамья из %s");
+        stoneFurniture.put("stone_bench_", "Скамья из %s");
 
         Map<String, String> colors = new LinkedHashMap<>();
         colors.put("black", "чёрного цвета");
@@ -168,7 +168,7 @@ public class ModLanguageProviderRuRu extends FabricLanguageProvider
         {
             for (Map.Entry<String, String> mat : colors.entrySet())
             {
-                String key = "item." + AestheticSeating.MOD_ID + "." + type.getKey() + mat.getKey();
+                String key = "block." + AestheticSeating.MOD_ID + "." + type.getKey() + mat.getKey();
                 String value = String.format(type.getValue(), mat.getValue());
                 translationBuilder.add(key, value);
             }

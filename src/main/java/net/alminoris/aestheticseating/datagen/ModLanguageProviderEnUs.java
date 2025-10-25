@@ -48,25 +48,8 @@ public class ModLanguageProviderEnUs extends FabricLanguageProvider
                     translationBuilder.add("block." + AestheticSeating.MOD_ID + "." + path, displayName);
                 });
 
-        Registries.ITEM.stream()
-                .filter(item ->
-                {
-                    Identifier id = Registries.ITEM.getId(item);
-                    return AestheticSeating.MOD_ID.equals(id.getNamespace());
-                })
-                .forEach(item ->
-                {
-                    Identifier id = Registries.ITEM.getId(item);
-                    String path = id.getPath();
-
-                    String[] parts = path.split("_");
-
-                    String displayName = Arrays.stream(parts)
-                            .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
-                            .collect(Collectors.joining(" "));
-
-                    translationBuilder.add("item." + AestheticSeating.MOD_ID + "." + path, displayName);
-                });
+        translationBuilder.add("item." + AestheticSeating.MOD_ID + ".cushion_remover","Cushion Remover");
+        translationBuilder.add("item." + AestheticSeating.MOD_ID + ".wrench","Wrench");
 
         translationBuilder.add("itemgroup.aseattab", "Aesthetic Seating");
     }
