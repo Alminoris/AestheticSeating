@@ -175,6 +175,6 @@ public class ModLanguageProviderDeDe extends FabricLanguageProvider
             }
         }
 
-        translationBuilder.add("itemgroup.aseattab", "Aesthetic Seating");
+        translationBuilder.add("itemGroup.aestheticseating.aseattab", "Aesthetic Seating");
     }
 }

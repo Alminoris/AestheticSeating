@@ -50,7 +50,7 @@ public class ModLanguageProviderEnUs extends FabricLanguageProvider
         translationBuilder.add("item." + AestheticSeating.MOD_ID + ".cushion_remover","Cushion Remover");
         translationBuilder.add("item." + AestheticSeating.MOD_ID + ".wrench","Wrench");
 
-        translationBuilder.add("itemgroup.aseattab", "Aesthetic Seating");
+        translationBuilder.add("itemGroup.aestheticseating.aseattab", "Aesthetic Seating");
     }
 
     public static String movePrefix(String input, String[] arr)
