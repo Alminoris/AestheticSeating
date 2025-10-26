@@ -107,7 +107,7 @@ public class SimpleChair extends SeatingFurniture
             if (!world.isClient)
             {
                 Direction currentFacing = state.get(FACING);
-                String colorName = Registries.ITEM.getId(stack.getItem()).getPath().split("_")[0];
+                String colorName = Registries.ITEM.getId(stack.getItem()).getPath().replace("_wool", "");
                 world.setBlockState(pos, state
                         .with(FACING, currentFacing)
                         .with(RECLINED, currentReclined)
